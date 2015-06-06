@@ -1,0 +1,60 @@
+# Site wide configuration
+
+title:            Jon Ribeiro
+locale:           en_US
+url:              
+
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+
+# Site owner
+owner:
+  name: Jon Ribeiro
+  avatar: jon.jpg
+  bio: "Software Developer, languages lover, Fitness and Free Software enthusiast, ArchLinux and Debian user, Man Utd supporter, Metalcore addict ;)"
+  email: contact@jonathas.com
+  disqus-shortname: 
+  twitter: jonathasrr
+  facebook: jonathasrr
+  google:
+    plus: JonathasRodrigues
+    analytics: 
+    verify: 
+    ad-client: 
+    ad-slot: 
+  bing-verify: 
+  github: jonathas
+  stackoverflow: #http://stackoverflow.com/users/123456/username
+  linkedin: jonathasrodrigues
+  xing: #username
+  instagram: jonrio
+  lastfm: jonathasrr
+  tumblr: jonaroundtheworld
+  pinterest: jonathasrr
+  foursquare: jonathasrr
+  steam: #username
+  dribbble: #username
+  youtube: jonathasrr
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
