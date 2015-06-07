@@ -119,9 +119,10 @@ for (ip in ipList) {
 
 ### C&#35;
 
-(Yes, I've developed this code on my ArchLinux box with MonoDevelop and it ran beautifully) using System;
+(Yes, I've developed this code on my ArchLinux box with MonoDevelop and it ran beautifully)
 
 {% highlight csharp %}
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO.File;
