@@ -22,27 +22,32 @@ The ones that I had more fun with were:
 ### Ruby
 {% highlight ruby %}
 def read_parse(filepath)
-    ip_count = {}
-    File.open(filepath, &quot;r&quot;) do |f|
-        f.each_line do |line|
-            ip_address = line.split(&quot; &quot;)[0]
-            if ip_count.has_key?(ip_address)
-                ip_count[ip_address] += 1
-            else
-                ip_count[ip_address] = 1
-            end
-        end
-    end
+	ip_count = {}
 
-    return Hash[ip_count.sort_by{|k, v| v}.reverse]
+	File.open(filepath, "r") do |f|
+	  f.each_line do |line|
+	    
+	    ip_address = line.split(" ")[0]
+
+	    if ip_count.has_key?(ip_address)
+	    	ip_count[ip_address] += 1
+	    else
+	    	ip_count[ip_address] = 1
+	    end
+	    
+	  end
+
+	 end
+
+	return Hash[ip_count.sort_by{|k, v| v}.reverse]
 end
 
-ip_list = read_parse(&quot;../apache.log&quot;)
+ip_list = read_parse("../apache.log")
 
-puts &quot;RANK\tIP\t\tCOUNT&quot;
+puts "RANK\tIP\t\tCOUNT"
 
 ip_list.take(10).each_with_index do |ip, index|
-    puts &quot;#{index+1}\t#{ip[0]}\t#{ip[1]}&quot;
+	puts "#{index+1}\t#{ip[0]}\t#{ip[1]}"
 end
 {% endhighlight %}
 
@@ -50,34 +55,33 @@ end
 
 ### Python
 {% highlight python %}
-from operator import itemgetter
+from operator import itemgetter 
 
 def read_parse(filepath):
-    ip_count = {}
+	ip_count = {}
 
-    with open(filepath, &quot;r&quot;) as file:
-        for line in file:
-            ip_address = line.split(&quot; &quot;)[0]
+	with open(filepath, "r") as file:
+		for line in file:
+			ip_address = line.split(" ")[0]
 
-            if ip_address in ip_count:
-                ip_count[ip_address] += 1
-            else:
-                ip_count[ip_address] = 1
+			if ip_address in ip_count:
+				ip_count[ip_address] += 1
+			else:
+				ip_count[ip_address] = 1
 
-    return ip_count
+	return ip_count
 
-ip_list = read_parse(&quot;../apache.log&quot;)
+
+ip_list = read_parse("../apache.log")
 
 #The header
-print(&quot;RANK\tIP\t\tCOUNT&quot;)
+print("RANK\tIP\t\tCOUNT")
 
-# Using enumerate() so we can have the iteration's index (rank variable), 
-# starting at 1
-# Sorting the items of the ip_list by their value in reverse order, 
-# but limiting the loop from 0 to 10
+# Using enumerate() so we can have the iteration's index (rank variable), starting at 1
+# Sorting the items of the ip_list by their value in reverse order, but limiting the loop from 0 to 10
 # Ps: Python is beautiful =)
 for rank, line in enumerate(sorted(ip_list.items(), key=itemgetter(1), reverse=True)[0:10], start = 1):
-    print(&quot;{}\t{}\t{}\t&quot;.format(rank,line[0],line[1]))
+	print("{}\t{}\t{}\t".format(rank,line[0],line[1]))
 {% endhighlight %}
 
 * * *
@@ -88,30 +92,31 @@ for rank, line in enumerate(sorted(ip_list.items(), key=itemgetter(1), reverse=T
 def read_parse(filepath) {
 	def thefile = new File(filepath)
 	def ipCount = [:]
-	
+
 	thefile.eachLine {
-		def ipAddress = it.split(' ')[0]
-		
-		if(ipCount[ipAddress] == null) {
-			ipCount[ipAddress] = 1
+	    def ipAddress = it.split(' ')[0]
+
+	    if(ipCount[ipAddress] == null) {
+	    	ipCount[ipAddress] = 1
 		} else {
 			ipCount[ipAddress]++
 		}
+	    
 	}
-	
+
 	return ipCount.sort { -it.value }
 }
 
-def ipList = read_parse(&quot;../apache.log&quot;)
+def ipList = read_parse("../apache.log")
 
 def rank = 1
 
-print &quot;RANK\tIP\t\tCOUNT\n&quot;
+print "RANK\tIP\t\tCOUNT\n"
 
 for (ip in ipList) {
-	print rank + &quot;\t&quot; + ip.key + &quot;\t&quot; + ip.value + &quot;\n&quot;
-	rank++
-	if(rank &gt; 10) break
+    print rank + "\t" + ip.key + "\t" + ip.value + "\n"
+    rank++
+    if(rank > 10) break
 }
 {% endhighlight %}
 
@@ -132,9 +137,9 @@ namespace Top10IPs {
 		public static void Main (string[] args) {
 			try {
 
-				Dictionary&lt;string , int&gt; dic = new Dictionary&lt;/string&gt;&lt;string , int&gt;();
+				Dictionary<string, int> dic = new Dictionary<string, int>();
 
-				string[] lines = ReadAllLines(@&quot;apache.log&quot;);
+				string[] lines = ReadAllLines(@"apache.log");
 				char[] delimiterChars = { ' ' };
 
 				foreach (string line in lines) {
@@ -149,13 +154,13 @@ namespace Top10IPs {
 
 				}
 
-				Console.WriteLine(&quot;RANK\tIP\t\tCOUNT&quot;);
+				Console.WriteLine("RANK\tIP\t\tCOUNT");
 
 				int i = 1;
-				foreach (KeyValuePair&lt;/string&gt;&lt;string ,int&gt; item in dic.OrderByDescending(key=&gt; key.Value)) {
-					Console.WriteLine(i + &quot;\t&quot; + item.Key + &quot;\t&quot; + item.Value);
+				foreach (KeyValuePair<string,int> item in dic.OrderByDescending(key=> key.Value)) {
+					Console.WriteLine(i + "\t" + item.Key + "\t" + item.Value);
 					i++;
-					if(i &gt; 10) break;
+					if(i > 10) break;
 				}
 			
 			} catch (Exception ex) {
@@ -163,7 +168,7 @@ namespace Top10IPs {
 			}
 		}
 	}
-} 
+}
 
 {% endhighlight %}
 
