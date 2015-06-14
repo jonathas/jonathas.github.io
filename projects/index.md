@@ -9,7 +9,28 @@ image:
   creditlink: http://twitrheaders.com/
 ---
 
-Aulas Coletivas (Group classes)
+Here you can find more about some of the projects I've developed during my career:
+
+- [Aulas Coletivas (Group classes)](#aulascoletivas)
+- [Mobile Micro Training](#mobilemicrotraining)
+- [Micro Marketing](#micromarketing)
+- [Team Nogueira - Purchasing System](#tnpurchasing)
+- [Arquivo Contemporâneo](#arquivocontemporaneo)
+- ["Gym in the clouds" - Micropag (Payment Module)](#annmicropag)
+- ["Gym in the clouds" - Statistics Module](#annstatistics)
+- [Configuration and migration to Amazon EC2 and RDS](#migrationaws)
+- [fbuploadtopage - Script to upload images to a Facebook page](#fbuploadtopage)
+- ["Gym in the clouds" - Marketing Module](#annmarketing)
+- ["Gym in the clouds" - Manager Module](#annmanager)
+- ["Gym in the clouds" - Calendar Module](#anncalendar)
+- [NBNews](#nbnews)
+- [Rio Criativo](#riocriativo)
+- [Myth](#myth)
+- [Frank Shipbrokers](#fsb)
+
+* * *
+
+<a name="aulascoletivas"></a>Aulas Coletivas (Group classes)
 -------------------------------
 
 These mobile apps and web system were developed for the gyms to control their schedules and see which clients were present and the qualifications for each trainer. 
@@ -25,7 +46,7 @@ This web system enables the gym to control the activities, schedules, trainers a
 
 * * *
 
-Mobile Micro Training
+<a name="mobilemicrotraining"></a>Mobile Micro Training
 ---------------------
 
 This was a software developed for the clients of the gyms to view their trainings on their mobile phones. 
@@ -37,7 +58,7 @@ Ps: The names in the screenshots have been blurred for privacy. The software was
 
 * * *
 
-Micro Marketing
+<a name="micromarketing"></a>Micro Marketing
 ---------------
 
 This desktop software was developed to integrate with the [Micro Fitness](http://sistemas.microuniversity.com.br/portal/interna.php?conteudo_pagina=13) software and fetch all client data from it through filters set by the user. 
@@ -53,7 +74,7 @@ The software was developed for [Micro University](http://microuniversity.com.br)
 
 * * *
 
-Team Nogueira - Purchasing System
+<a name="tnpurchasing"></a>Team Nogueira - Purchasing System
 ---------------------------------
 
 This desktop software was developed for the Team Nogueira franchises to request and purchase their products and for the franchisor to add new available products and control the requests from the franchises. 
@@ -62,7 +83,7 @@ Developed using **VB.NET** with **MySQL** for [Micro University](http://microuni
 
 * * *
 
-Arquivo Contemporâneo
+<a name="arquivocontemporaneo"></a>Arquivo Contemporâneo
 ---------------------
 
 This was the website for this furniture design store called Arquivo Contemporâneo (Contemporary file). 
@@ -73,7 +94,7 @@ I had to develop new features for it, new areas and fix some bugs as well. Devel
 
 * * *
 
-Academia nas Nuvens (Gym in the clouds) - Micropag (Payment Module)
+<a name="annmicropag"></a>Academia nas Nuvens (Gym in the clouds) - Micropag (Payment Module)
 -------------------------------------------------------------------
 
 This was the payment and credits module for the Gym in the clouds system. It was developed so that the clients from Micro University could buy credits in order to use them on other Gym in the clouds modules. 
@@ -88,7 +109,7 @@ The system was developed for [Micro University](http://microuniversity.com.br)<b
 
 * * *
 
-Academia nas Nuvens (Gym in the clouds) - Statistics Module
+<a name="annstatistics"></a>Academia nas Nuvens (Gym in the clouds) - Statistics Module
 -----------------------------------------------------------
 
 This was the Statistics module for the Gym in the clouds system. It was developed so that the clients from Micro University could have several kinds of reports about their gyms and their clients. 
@@ -101,7 +122,7 @@ The system was developed for [Micro University](http://microuniversity.com.br)<b
 
 * * *
 
-Configuration and migration of all the web systems to Amazon EC2 and RDS
+<a name="migrationaws"></a>Configuration and migration of all the web systems to Amazon EC2 and RDS
 ------------------------------------------------------------------------
 
 ![LAMP](/images/projects/lamp-stack.jpg)![AWS](/images/projects/aws_logo.jpg)<br /><br />I've configured **Amazon EC2** instances with **Debian GNU/Linux**, **Apache** and **PHP** for the migration of the Academia nas Nuvens systems. 
@@ -110,7 +131,7 @@ I've also configured **Amazon RDS** instances with **MySQL** using InnoDB with M
 
 * * *
 
-fbuploadtopage - Script to upload images to a Facebook page
+<a name="fbuploadtopage"></a>fbuploadtopage - Script to upload images to a Facebook page
 -----------------------------------------------------------
 
 This php software was developed in order to be integrated with an augmented reality software. 
@@ -121,7 +142,7 @@ Developed using **PHP**, **PDO** and **SQLite** for [NETbureau](http://netbureau
 
 * * *
 
-Academia nas Nuvens (Gym in the clouds) - Marketing Module
+<a name="annmarketing"></a>Academia nas Nuvens (Gym in the clouds) - Marketing Module
 ----------------------------------------------------------
 
 This was the Marketing module for the Gym in the clouds system. It was developed so that the clients from Micro University could use it to send **Newsletters** integrated with other system from the company in a transparent way for them. 
@@ -134,7 +155,7 @@ The interface was created with **Twitter Bootstrap**. The system was developed f
 
 * * *
 
-Academia nas Nuvens (Gym in the clouds) - Manager Module
+<a name="annmanager"></a>Academia nas Nuvens (Gym in the clouds) - Manager Module
 --------------------------------------------------------
 
 This was the Manager module for the Gym in the clouds system. Gym owners could manage their clients, plans and have some reports. 
@@ -145,7 +166,7 @@ Developed using **PHP** with **CodeIgniter** framework and **MySQL**, using dist
 
 * * *
 
-Academia nas Nuvens (Gym in the clouds) - Calendar Module
+<a name="anncalendar"></a>Academia nas Nuvens (Gym in the clouds) - Calendar Module
 ---------------------------------------------------------
 
 This was the calendar module for the "Gym in the clouds" system. It was developed so that the gyms and pilates studios could control the schedules of each one of their clients in a daily, weekly or monthly view, have attendance reports, activities and their schedules, places where they're going to happen and how many people are scheduled for them. 
@@ -156,7 +177,7 @@ Developed using **PHP** with **CodeIgniter** framework and **MySQL**, using dist
 
 * * *
 
-NBNews
+<a name="nbnews"></a>NBNews
 ------
 
 System for **Newsletter management** and to send Newsletters to mail lists of registered clients, separated by categories, with reports such as: clicks, views, how many people have unsubscribed from the mail list, etc. 
@@ -172,7 +193,7 @@ The system was developed for [NETbureau](http://netbureau.com.br)<br /><br />
 
 * * *
 
-Rio Criativo
+<a name="riocriativo"></a>Rio Criativo
 ------------
 
 System for registration of users interested in subscribing for a business incubator, also management of all the process where the evaluators had to choose the finalists. 
@@ -188,7 +209,7 @@ The system was developed for [NETbureau](http://netbureau.com.br)<br /><br />
 
 * * *
 
-Myth
+<a name="myth"></a>Myth
 ----
 
 Website created in **HTML** and **CSS** with lots of **jQuery** for the effects and transitions. 
@@ -202,7 +223,7 @@ Created and Developed for [NETbureau](http://netbureau.com.br)<br /><br />[![myt
 
 * * *
 
-Frank Shipbrokers
+<a name="fsb"></a>Frank Shipbrokers
 -----------------
 
 System for management and search of the company's ships and clients Developed in **PHP** with **MySQL** and **jQuery**, using some classes found in [PHPClasses.org](http://www.phpclasses.org). 
