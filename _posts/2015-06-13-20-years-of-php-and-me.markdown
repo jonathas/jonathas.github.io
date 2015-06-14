@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "20 Years of PHP and Me"
-excerpt: "PHP's 20 anniversary and what this language means to my career"
+excerpt: "PHP's 20th anniversary and what this language means to my career"
 tags: [php, 20yearsofphp, lamp, career]
 date: 2015-06-13T22:38:08-03:00
 comments: true
