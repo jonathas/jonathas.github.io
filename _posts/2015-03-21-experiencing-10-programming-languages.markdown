@@ -2,7 +2,7 @@
 layout: post
 title: "Experiencing 10 Programming Languages"
 excerpt: "I never understand when some people defend one programming language or full stack and never wanna know about other technologies and learn more about their differences"
-tags: [apache, c, groovy, java, javascript, lua, perl, php, python, ruby, top10, dotnet]
+tags: [apache, csharp, groovy, java, javascript, lua, perl, php, python, ruby, top10, dotnet]
 comments: true
 date: 2015-03-21T18:02:27-03:00
 ---
