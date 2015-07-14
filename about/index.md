@@ -10,7 +10,7 @@ image:
   creditlink: #http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
  
-Hi, I'm Jonathas Rodrigues Ribeiro (a.k.a. Jon). I was born and am currently living in Rio de Janeiro, RJ - Brazil.
+Hi, I'm Jonathas Rodrigues Ribeiro (a.k.a. Jon). I was born in Rio de Janeiro, but I'm currently living in Brno, Czech Republic.
 
 I've been working as a Software Developer since 2008 and I intend to continue getting better in that area, probably someday working as a Software Engineer or Project Manager.
 
@@ -22,11 +22,7 @@ In my free time, I enjoy practicing sports such as Muay Thai (Thai Boxing), cycl
 
 ## Professional
 
-I currently work as a Software Developer for [Micro University](http://microuniversity.com.br), a company that develops fitness software, with clients all over Brazil. I've been developing for the SaaS (System as a service) model, using PHP with [CodeIgniter](http://codeigniter.com) and MySQL, and a lot of JavaScript (jQuery). 
-
-I've been doing Linux server management, systems integration (REST/SOAP) and migrating the company's systems to Amazon Web Services (EC2) with Debian GNU/Linux and LAMP, and distributed MySQL databases on Amazon RDS. 
-
-Currently I've also been developing desktop and web applications using the .NET framework, as well as mobile applications using Ionic Framework/AngularJS/Cordova.
+I currently work as a Software Developer for [Pixmania](http://pixmania.com) in Brno, Czech Republic.
 
 * [Projects I've developed or am currently working on](http://jonathas.com/projects)
 * [My curriculum and some other resources about my career](http://jonathas.com/curriculum-vitae)
