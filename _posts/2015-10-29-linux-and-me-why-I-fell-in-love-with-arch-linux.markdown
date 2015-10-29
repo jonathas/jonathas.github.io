@@ -80,6 +80,8 @@ Distros that are based on Arch Linux
 Due to the success of the distribution, many based ones started to appear. They usually come with an installer that does everything for the user and also some software by default. That's useful for when you just wanna install it as fast as possible and already start using it having to configure the least possible. At work for example, I decided to give Manjaro a try instead of using Ubuntu. Besides Manjaro, other ones worth trying are Chackra (heavily geared towards KDE) and more recently Apricity OS, which I still haven't tried on the date I'm writing this post, but it looks interesting. 
 
 Read more about Arch based distributions:
-[Top 5 Arch Linux Derivatives](https://www.maketecheasier.com/best-arch-linux-derivatives)
-[Arch based distributions (Arch wiki)](https://wiki.archlinux.org/index.php/Arch_based_distributions_%28active%29)
+
+- [Top 5 Arch Linux Derivatives](https://www.maketecheasier.com/best-arch-linux-derivatives)
+
+- [Arch based distributions (Arch wiki)](https://wiki.archlinux.org/index.php/Arch_based_distributions_%28active%29)
 
