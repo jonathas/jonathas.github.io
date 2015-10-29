@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Linux and me: Why I fell in love with Arch Linux"
