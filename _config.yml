@@ -28,7 +28,7 @@ kramdown:
 owner:
   name: Jon Ribeiro
   avatar: jon.jpg
-  bio: "Software Developer, languages lover, Fitness and Free Software enthusiast, ArchLinux and Debian user, Man Utd supporter, Metalcore addict ;)"
+  bio: "Software Developer, languages lover, Fitness and Open Source enthusiast, ArchLinux and Debian user, Man Utd supporter, Metalcore addict ;)"
   location: "Brno, CZ"
   email: contact@jonathas.com
   disqus-shortname: jonribeiro
@@ -36,7 +36,7 @@ owner:
   facebook: jonathasrr
   skype: jonathas_rodrigues
   google:
-    plus: JonathasRodrigues
+    plus: #JonathasRodrigues
     analytics: UA-63833564-1
     verify: 
     ad-client: 
@@ -49,11 +49,11 @@ owner:
   instagram: jonrio
   lastfm: jonathasrr
   tumblr: #jonaroundtheworld
-  pinterest: jonathasrr
-  foursquare: jonathasrr
+  pinterest: #jonathasrr
+  foursquare: #jonathasrr
   steam: #username
   dribbble: #username
-  youtube: jonathasrr
+  youtube: #jonathasrr
   soundcloud: #username
   weibo: #username
   flickr: #username
