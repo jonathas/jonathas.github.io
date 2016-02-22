@@ -43,7 +43,7 @@ There's also a plugin for OAuth, another for Geolocation, SMS, etc.
 Ionicons
 --------
 
-![alt text](/images/posts/ionicons.png "Ionicons")
+![alt text](/images/posts/ionicons.jpg "Ionicons")
 
 This is the name of the icon font that comes with Ionic, also free and open source. If you want to implement a close button on your app, for example, you just have to use the class "ion-close" inside of an element:
 
