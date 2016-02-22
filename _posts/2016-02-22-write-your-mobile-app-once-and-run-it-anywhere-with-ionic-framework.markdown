@@ -83,6 +83,5 @@ Conclusion
 
 If you're looking to develop mobile apps for your company in a simple way and your apps won't need very specific resources from the native platforms, I can certainly recommend you Ionic Framework. It's fast, the code is clean and it offers everything you need for your mobile app development. It's not only a product, but a whole platform with many services being developed by Drifty and has a bright future.
 
-You can find the source code of the Ionic Framework on Github:
-https://github.com/driftyco/ionic
+You can find the source code of the [Ionic Framework on Github](https://github.com/driftyco/ionic)
 
