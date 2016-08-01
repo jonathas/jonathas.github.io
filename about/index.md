@@ -22,7 +22,7 @@ In my free time, I enjoy practicing sports such as Muay Thai (Thai Boxing), cycl
 
 ## Professional
 
-I currently work as a Software Developer for [Pixmania](http://pixmania.com) in Brno, Czech Republic.
+I currently work as a Software Developer for [Mautilus](http://mautilus.com) in Brno, Czech Republic.
 
 * [Projects I've developed or am currently working on](http://jonathas.com/projects)
 * [My curriculum and some other resources about my career](http://jonathas.com/curriculum-vitae)
