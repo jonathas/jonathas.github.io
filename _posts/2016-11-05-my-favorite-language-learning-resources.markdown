@@ -9,7 +9,7 @@ image:
   feature: posts/cover-hluboka.jpg
 ---
 
-In this post I'd like to tell you about some resources I've been using for learning new languages or have used some time ago.
+In this post I'd like to tell you about some resources I've been using or have used some time ago for learning new languages.
 
 Websites where you can learn many languages
 ---
