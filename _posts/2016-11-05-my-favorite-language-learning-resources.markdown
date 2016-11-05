@@ -6,7 +6,7 @@ tags: [languages, resources, links, english, french, czech, duolingo]
 date: 2016-11-05T14:35:08-01:00
 comments: true
 image:
-  feature: posts/cover-travel.jpg
+  feature: posts/cover-hluboka.jpg
 ---
 
 In this post I'd like to tell you about some resources I've been using for learning new languages or have used some time ago.
