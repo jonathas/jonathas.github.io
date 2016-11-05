@@ -32,6 +32,8 @@ This website is so funny that you'll laugh out loud with some associations it pr
 
 It has many courses about almost any language you can think of, but it doesn't limit itself to language courses, as it also has some other course categories. It also has a mobile app with an option to download the course to practice offline.
 
+Go to [memrise.com](http://memrise.com) and laugh out loud!
+
 ### Ba Ba Dum
 
 ![alt text](/images/posts/babadum.png "Ba Ba Dum")
