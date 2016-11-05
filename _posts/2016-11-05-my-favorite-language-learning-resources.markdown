@@ -16,7 +16,7 @@ Websites where you can learn many languages
 
 In these websites you can study many languages, such as English, Spanish, German, French, Italian, etc.
 
-#### Duolingo
+### Duolingo
 
 ![alt text](/images/posts/duolingo.png "Duolingo")
 
@@ -24,7 +24,7 @@ What's very interesting about Duolingo is that it uses gamification, so you get 
 
 Go to [duolingo.com](https://www.duolingo.com/) to create your account, choose a language and start studying.
 
-#### Memrise
+### Memrise
 
 ![alt text](/images/posts/memrise.png "Memrise")
 
@@ -32,7 +32,7 @@ This website is so funny that you'll laugh out loud with some associations it pr
 
 It has many courses about almost any language you can think of, but it doesn't limit itself to language courses, as it also has some other course categories. It also has a mobile app with an option to download the course to practice offline.
 
-#### Ba Ba Dum
+### Ba Ba Dum
 
 ![alt text](/images/posts/babadum.png "Ba Ba Dum")
 
@@ -40,7 +40,7 @@ Ba Ba Dum is a very practical online language game, where you hear a word in the
 
 Go to [babadum.com/play](http://babadum.com/play) and have fun!
 
-#### Lyrics training
+### Lyrics training
 
 ![alt text](/images/posts/lyricstraining.png "Lyrics training")
 
@@ -53,7 +53,7 @@ English
 
 If you want to learn specifically English or to improve your knowledge, these websites are a good choice.
 
-#### Cambridge Dictionary
+### Cambridge Dictionary
 
 ![alt text](/images/posts/cambridgedic.gif "Cambridge Dictionary")
 
@@ -61,7 +61,7 @@ I took an English course in Brazil and this dictionary was used very often durin
 
 Go [here](https://dictionary.cambridge.org/) and try it with some words.
 
-#### English Language (ESL) Grammar Quizzes
+### English Language (ESL) Grammar Quizzes
 
 Test yourself with this selection of 517 free English language quizzes covering grammar, usage and vocabulary for beginner, intermediate and advanced level English students. Simply answer all of the questions in the quiz to see your score and other statistics.
 
@@ -97,11 +97,11 @@ And finally, if you're thinking about studying Czech, the best way is certainly 
 
 Unfortunately as of this moment, the Czech course on Duolingo is not ready yet, so I could recommend some other resources.
 
-#### Local Lingo
+### Local Lingo
 
-This is a website for learning Czech with exercises and also audio with pronunciation. See [more here]([Local Lingo](http://www.locallingo.com/).
+This is a website for learning Czech with exercises and also audio with pronunciation. See [more here](http://www.locallingo.com/).
 
-#### Mluvite Cesky
+### Mluvite Cesky
 
 A multilingual website to study Czech. As they say: "This website will help you to acquire the basics of Czech, the second most frequently used western Slavic language, as well as medical terminology, all online and all for free."
 
