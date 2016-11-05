@@ -5,8 +5,6 @@ excerpt: "Some of the projects I've developed or am currently working on"
 tags: [projects, software, portfolio, systems]
 image:
   feature: cover-projects.jpg
-  credit: Twitr Headers
-  creditlink: http://twitrheaders.com/
 ---
 
 Here you can find more about some of the projects I've developed during my career:
