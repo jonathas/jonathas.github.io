@@ -16,9 +16,9 @@ I've been working as a Software Developer since 2008 and I intend to continue ge
 
 I've been using GNU/Linux since December 2006 and I just love and feel at home with my [Arch Linux](http://archlinux.org) on my Notebook and [Debian GNU/Linux](http://debian.org) on the servers I manage at work and at home.
 
-As for my hobbies, I believe I'll be an eternal languages student. I think it's very important to know other languages and that already brought me many opportunities. Besides English I also know Spanish, Brazilian Portuguese (native) and very basic French. I also really love traveling, and strongly agree that traveling really broadens one's mind.
+As for my hobbies, I like to take photos, really love traveling and strongly agree that it indeed broadens one's mind.
 
-In my free time, I enjoy practicing sports such as Muay Thai (Thai Boxing), cycling and working out.
+In my free time, I enjoy practicing sports such as Muay Thai (Thai Boxing) and working out.
 
 ## Professional
 
