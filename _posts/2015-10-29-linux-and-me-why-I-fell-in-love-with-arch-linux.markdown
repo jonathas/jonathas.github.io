@@ -6,7 +6,7 @@ tags: [linux, archlinux, arch linux, arch, debian, windows, kiss, pacman, abs, a
 date: 2015-10-29T23:07:08-01:00
 comments: true
 image:
-  feature: posts/cover-archlinux.png
+  feature: posts/cover-archlinux.jpg
 ---
 
 In this post I'd like to talk about one of the things I love the most in tech, which is my favorite Linux distribution, called Arch Linux and why I chose it as my main OS.
