@@ -17,7 +17,7 @@ For this post I assume you already have Node configured and MongoDB running on l
 
 Before we start, I recommend using [Visual Studio Code](https://code.visualstudio.com/nodejs), as it integrates really well with TypeScript and has amazing features, such as IntelliSense and debugging.
 
-![alt text](/images/posts/vscode_20170315.png "VSCode website")
+![VSCode website](/images/posts/vscode_20170315.png "VSCode website")
 
 And of course, I'm on their official website for Node.js :)
 
@@ -40,7 +40,7 @@ bin/test/*_test.js
 
 This is usually the directory structure I have when creating a Node.js project.
 
-![alt text](/images/posts/directory_structure.jpg "Directory structure")
+![Directory structure](/images/posts/directory_structure.jpg "Directory structure")
 
 As you may notice after opening the gulpfile.js file, I keep there a task that transpiles the TypeScript code to JavaScript in a bin directory and generates sourcemaps to be used later by Istanbul when generating the code coverage. Because of these sourcemaps, Istanbul is able to map correctly the TypeScript files instead of the ugly JavaScript ones that are generated.
 
@@ -50,7 +50,7 @@ The .env file contains environment variables that can be accessed throughout the
 
 Example of a dot env file:
 
-```bash
+{% highlight bash linenos %}
 API_BASE='/api/v1/'
 DEFAULT_TIMEZONE='Europe/Prague'
 
@@ -59,36 +59,36 @@ DATE_FORMAT='YYYY-MM-DD'
 TIME_FORMAT='HH:mm:ss'
 
 DB_IP='127.0.0.1'
-```
+{% endhighlight %}
 
 Let's start our project with npm:
 
-```bash
+{% highlight bash linenos %}
 npm init
-```
+{% endhighlight %}
 
 For our build process to work, we need to install the required packages:
 
-```bash
+{% highlight bash linenos %}
 npm i express express-validator@2.20.8 mongoose dotenv body-parser bluebird --save
-```
+{% endhighlight %}
 
 and for the dev dependencies:
 
-```bash
+{% highlight bash linenos %}
 npm i tslint typescript vinyl-fs supertest mocha istanbul@1.0.0-alpha.2 gulp-typescript gulp-sourcemaps gulp chai @types/node @types/mocha @types/express @types/mongoose --save-dev
-```
+{% endhighlight %}
 
 Inside the package.json file used by npm, I usually leave "main" as "server.js" and set some values inside the "scripts" part:
 
-```javascript
+{% highlight javascript linenos %}
     "scripts": {
         "pretest": "gulp",
         "test": "istanbul cover --report cobertura --report lcov node_modules/mocha/bin/_mocha",
         "prestart": "gulp",
         "start": "nodemon bin/server.js"
     }
-```
+{% endhighlight %}
 
 Inside "start" it can be nodemon, pm2 or any other tool you use to run it for development. I recommend nodemon, as it is well suited for that. The way I deploy it, it doesn't matter what command is written there.
 
@@ -98,7 +98,7 @@ You can find an example of a package.json file I use [here](https://github.com/j
 
 Create a file called gulpfile.js in the root of the project with the following content:
 
-```javascript
+{% highlight javascript linenos %}
 const gulp = require("gulp");
 const sourcemaps = require("gulp-sourcemaps"); // So Istanbul is able to map the code
 const tsProject = require("gulp-typescript").createProject("tsconfig.json");
@@ -131,7 +131,7 @@ gulp.task("default", ["copy", "transpile"], (done) => done());
 gulp.task("watch", () => {
     gulp.watch(paths.tsfiles, ["transpile"]);
 });
-```
+{% endhighlight %}
 
 You will need to have a MongoDB instance up and running, so you can install it directly on your OS or use a Docker image. This part will not be covered by this post.
 
@@ -142,7 +142,7 @@ In [this link](https://github.com/jonathas/todo-api/blob/master/.gitignore) you 
 I usually create inside the test directory a common.ts file that is imported inside every test file. Each test file represents a controller and has a _test suffix.
 Inside this common.ts file, we declare the environment as test, import mocha, initialize supertest, etc.
 
-```javascript
+{% highlight javascript linenos %}
 process.env.NODE_ENV = "test";
 
 import "mocha";
@@ -162,13 +162,13 @@ export const cleanCollections = (): Promise<any> => {
     ];
     return Promise.all(cleanUp);
 };
-```
+{% endhighlight %}
 
 Our TODO API will have tasks, which are items in our TODO list. We can write some tests for our tasks so we assure they work the way we need them to.
 Let's create a file called tasks_test.ts inside the test directory and add some tests to it.
 I commented out the login and authentication parts of it, as this post is not about authentication and I plan to write about this subject later, but you can see now already how it could be implemented.
 
-```javascript
+{% highlight javascript linenos %}
 import { request, chai } from "./common";
 
 describe("# Tasks", () => {
@@ -277,7 +277,7 @@ describe("# Tasks", () => {
     });
 
 });
-```
+{% endhighlight %}
 
 As you can notice, now we have some tests accesssing our API and the responses they expect to get for each call. We still have no routes configured for that, so nothing would work so far. Let's get to it.
 
@@ -288,7 +288,7 @@ Inside the config directory I create files to configure express, the database, t
 
 An express.ts file would contain the following code:
 
-```javascript
+{% highlight javascript linenos %}
 const dotenv = require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -305,11 +305,11 @@ export = () => {
 
     return app;
 };
-```
+{% endhighlight %}
 
 The db.ts file:
 
-```javascript
+{% highlight javascript linenos %}
 import * as mongoose from "mongoose";
 (<any>mongoose).Promise = require("bluebird");
 let dbName;
@@ -345,7 +345,7 @@ mongoose.connect(`mongodb://${dbAddress}:${dbPort}/${dbName}`, options).catch(er
         throw err;
     }
 });
-```
+{% endhighlight %}
 
 The process.env.DB_IP value is coming from what was declared in the .env file
 
@@ -355,7 +355,7 @@ As you could notice above in the express.ts file, the routes directory was requi
 
 We can now create an index.ts file inside the routes directory with the following content:
 
-```javascript
+{% highlight javascript linenos %}
 export = (app) => {
 
     // Add here the routes for the controllers
@@ -377,13 +377,13 @@ export = (app) => {
     });
 
 };
-```
+{% endhighlight %}
 
 There we require only the file with the routes for the tasks endpoints, but we could also require other files with other endpoints as well, as our system grows and we add more functionality.
 
 The tasks.ts file inside the routes directory will have the following content:
 
-```javascript
+{% highlight javascript linenos %}
 import Task from "../controllers/tasks";
 
 export = (app) => {
@@ -401,7 +401,7 @@ export = (app) => {
     app.put(endpoint + "/:id", Task.update);
 
 };
-```
+{% endhighlight %}
 
 It's important here to use the correct HTTP methods. POST for creating, PUT for updating, GET for retrieving and DELETE for deleting data.
 
@@ -411,7 +411,7 @@ Documentation for these endpoints can be automatically generated by running the 
 
 Now we must declare the controller methods we called in the router. Let's create a tasks.ts file inside the controllers directory.
 
-```javascript
+{% highlight typescript linenos %}
 import { model as Task } from "../models/task";
 
 class Tasks {
@@ -484,7 +484,7 @@ class Tasks {
 }
 
 export default new Tasks();
-```
+{% endhighlight %}
 
 Some notes about it:
 
@@ -498,7 +498,7 @@ Some notes about it:
 
 Now we need to define a model for our tasks. Let's create the file task.ts inside the models directory, as it was imported above in the tasks controller.
 
-```javascript
+{% highlight javascript linenos %}
 import * as mongoose from "mongoose";
 
 export interface ITask extends mongoose.Document {
@@ -525,13 +525,13 @@ export const model = mongoose.model<ITask>("Task", schema);
 export const cleanCollection = (): Promise<any> => model.remove({}).exec();
 
 export default model;
-```
+{% endhighlight %}
 
 ## The server file
 
 Let's create the file that will start our API. Create the file server.ts in the root of your project:
 
-```javascript
+{% highlight javascript linenos %}
 const app = require("./config/express")();
 
 const port = process.env.PORT || 3000;
@@ -539,7 +539,7 @@ const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
     console.log(`Server listening on port ${port}. Environment: ${process.env.NODE_ENV}`);
 });
-```
+{% endhighlight %}
 
 ## Running the tests and checking the code coverage
 
@@ -547,17 +547,17 @@ We are ready to run our tests and check how much of the code is covered by them.
 
 Run the following command configured in the package.json file:
 
-```bash
+{% highlight bash linenos %}
 npm test
-```
+{% endhighlight %}
 
 This will run gulp to transpile our TypeScript files to JavaScript (es6), generate the sourcemaps and then run Mocha with supertest, which in turn will access our endpoints and generate the test results.
 
-![alt text](/images/posts/tests.jpg "Tests running")
+![Tests running](/images/posts/tests.jpg "Tests running")
 
 If all tests pass, the code coverage is generated by Istanbul and stored inside the coverage directory. Open the index.html file inside coverage/lcov-report to see it.
 
-![alt text](/images/posts/coverage.png "Code coverage report")
+![Code coverage report](/images/posts/coverage.png "Code coverage report")
 
 My next post will be about how to configure Visual Studio Code for debugging and transpiling TypeScript to JavaScript automatically.
 

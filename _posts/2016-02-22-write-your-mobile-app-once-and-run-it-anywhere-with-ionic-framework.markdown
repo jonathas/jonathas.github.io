@@ -21,14 +21,14 @@ It's a good option if you consider that you'll have one code that will run on ma
 Cordova
 -------
 
-![alt text](/images/posts/cordova.jpg "Cordova")
+![Cordova](/images/posts/cordova.jpg "Cordova")
 
 This is the open source software used by Ionic to manage and generate apps for different kinds of platforms and to allow the Ionic app to communicate with the device. So Ionic works as a wrapper for Cordova and Cordova has many plugins to extend its functionalities. The plugins offer JavaScript interfaces to native components on your device, allowing your app to use native device capabilities beyond what is available to pure web apps. For example, there are plugins for scanning QRCode, for working with push notifications or accessing your device's camera.
 
 ngCordova
 ---------
 
-![alt text](/images/posts/ngcordova.png "ngCordova")
+![ngCordova](/images/posts/ngcordova.png "ngCordova")
 
 At Ionic's website, they recommend the use of [ngCordova](http://ngcordova.com/) (Angular powered by Cordova), which is a collection of [70+ AngularJS extensions](http://ngcordova.com/docs/plugins/) (wrappers) on top of the Cordova API that make it easy to build, test, and deploy Cordova mobile apps with AngularJS. 
 
@@ -43,7 +43,7 @@ There's also a plugin for OAuth, another for Geolocation, SMS, etc.
 Ionicons
 --------
 
-![alt text](/images/posts/ionicons.jpg "Ionicons")
+![Ionicons](/images/posts/ionicons.jpg "Ionicons")
 
 This is the name of the icon font that comes with Ionic, also free and open source. If you want to implement a close button on your app, for example, you just have to use the class "ion-close" inside of an element:
 

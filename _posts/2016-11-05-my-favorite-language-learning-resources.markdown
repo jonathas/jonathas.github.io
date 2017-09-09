@@ -18,7 +18,7 @@ In these websites you can study many languages, such as English, Spanish, German
 
 ### Duolingo
 
-![alt text](/images/posts/duolingo.png "Duolingo")
+![Duolingo](/images/posts/duolingo.png "Duolingo")
 
 What's very interesting about Duolingo is that it uses gamification, so you get points as you learn and that motivates you to learn more. It has a very good mobile app as well, so you can practice during your daily commute.
 
@@ -26,7 +26,7 @@ Go to [duolingo.com](https://www.duolingo.com/) to create your account, choose a
 
 ### Memrise
 
-![alt text](/images/posts/memrise.png "Memrise")
+![Memrise](/images/posts/memrise.png "Memrise")
 
 This website is so funny that you'll laugh out loud with some associations it presents you for you to memorize the words. That's a great way to learn a language, as we tend to learn better when we're having fun!
 
@@ -36,7 +36,7 @@ Go to [memrise.com](http://memrise.com) and laugh out loud!
 
 ### Ba Ba Dum
 
-![alt text](/images/posts/babadum.png "Ba Ba Dum")
+![Ba Ba Dum](/images/posts/babadum.png "Ba Ba Dum")
 
 Ba Ba Dum is a very practical online language game, where you hear a word in the language of your choice and see four pictures, so you have to click on the picture that means what you just heard. For that you accumulate points and associate listening with images.
 
@@ -44,7 +44,7 @@ Go to [babadum.com/play](http://babadum.com/play) and have fun!
 
 ### Lyrics training
 
-![alt text](/images/posts/lyricstraining.png "Lyrics training")
+![Lyrics training](/images/posts/lyricstraining.png "Lyrics training")
 
 In my opinion, one of the best ways for learning a language is listening to music. In this website you can choose a language and complete gaps in the lyrics for the song it's playing. Among the language choices, you have: English, Spanish, Portuguese, French, Italian, German, Dutch, Japanese, Turkish and Catalan
 
@@ -57,7 +57,7 @@ If you want to learn specifically English or to improve your knowledge, these we
 
 ### Cambridge Dictionary
 
-![alt text](/images/posts/cambridgedic.gif "Cambridge Dictionary")
+![Cambridge Dictionary](/images/posts/cambridgedic.gif "Cambridge Dictionary")
 
 I took an English course in Brazil and this dictionary was used very often during classes in order to explain the meaning of some words. There you can also compare British and American versions, as well as listen to them.
 
@@ -93,7 +93,7 @@ If French is your current target language, here are some of the websites that I 
 Czech
 ---
 
-![alt text](/images/posts/jon_czechflag.jpg "Jon and the Czech flag")
+![Jon and the Czech flag](/images/posts/jon_czechflag.jpg "Jon and the Czech flag")
 
 And finally, if you're thinking about studying Czech, the best way is certainly by being in the country and joining a Czech course, since there's not as much online material as for other languages. I've been studying Czech because I've been living in the country and want to understand people here better, how they think and be able to communicate with them. What's also interesting about studying Czech is that other slavic languages (Slovak, Polish, Russian) start getting clearer the more you know Czech, as they share the same root.
 
