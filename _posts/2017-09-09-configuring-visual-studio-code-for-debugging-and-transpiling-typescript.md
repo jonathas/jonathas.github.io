@@ -59,7 +59,7 @@ After saving this file with the Mocha options, when you go to the Debug view, yo
 
 ## Running the tests and using the debugger
 
-When you click on the play button it will start running the tests inside the bin/test directory, if you followed the configuration I created on my [previous post about testing with Mocha]().
+When you click on the play button it will start running the tests inside the bin/test directory, if you followed the configuration I created on my [previous post about testing with Mocha](https://jonathas.com/tests-and-code-coverage-on-node-using-typescript-with-mocha-and-istanbul/).
 If there's no bin directory yet with the transpiled TypeScript, then you'll have to run gulp before to create it and run the gulp tasks.
 
 This is the result of the tests running inside Visual Studio Code using Mocha:
