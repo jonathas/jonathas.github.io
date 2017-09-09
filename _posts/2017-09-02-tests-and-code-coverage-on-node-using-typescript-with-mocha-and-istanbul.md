@@ -63,31 +63,31 @@ DB_IP='127.0.0.1'
 
 Let's start our project with npm:
 
-{% highlight bash linenos %}
+```bash
 npm init
-{% endhighlight %}
+```
 
 For our build process to work, we need to install the required packages:
 
-{% highlight bash linenos %}
+```bash
 npm i express express-validator@2.20.8 mongoose dotenv body-parser bluebird --save
-{% endhighlight %}
+```
 
 and for the dev dependencies:
 
-{% highlight bash linenos %}
+```bash
 npm i tslint typescript vinyl-fs supertest mocha istanbul@1.0.0-alpha.2 gulp-typescript gulp-sourcemaps gulp chai @types/node @types/mocha @types/express @types/mongoose --save-dev
-{% endhighlight %}
+```
 
 Inside the package.json file used by npm, I usually leave "main" as "server.js" and set some values inside the "scripts" part:
 
 {% highlight javascript linenos %}
-    "scripts": {
-        "pretest": "gulp",
-        "test": "istanbul cover --report cobertura --report lcov node_modules/mocha/bin/_mocha",
-        "prestart": "gulp",
-        "start": "nodemon bin/server.js"
-    }
+"scripts": {
+    "pretest": "gulp",
+    "test": "istanbul cover --report cobertura --report lcov node_modules/mocha/bin/_mocha",
+    "prestart": "gulp",
+    "start": "nodemon bin/server.js"
+}
 {% endhighlight %}
 
 Inside "start" it can be nodemon, pm2 or any other tool you use to run it for development. I recommend nodemon, as it is well suited for that. The way I deploy it, it doesn't matter what command is written there.
@@ -142,7 +142,7 @@ In [this link](https://github.com/jonathas/todo-api/blob/master/.gitignore) you 
 I usually create inside the test directory a common.ts file that is imported inside every test file. Each test file represents a controller and has a _test suffix.
 Inside this common.ts file, we declare the environment as test, import mocha, initialize supertest, etc.
 
-{% highlight javascript linenos %}
+{% highlight typescript linenos %}
 process.env.NODE_ENV = "test";
 
 import "mocha";
@@ -168,7 +168,7 @@ Our TODO API will have tasks, which are items in our TODO list. We can write som
 Let's create a file called tasks_test.ts inside the test directory and add some tests to it.
 I commented out the login and authentication parts of it, as this post is not about authentication and I plan to write about this subject later, but you can see now already how it could be implemented.
 
-{% highlight javascript linenos %}
+{% highlight typescript linenos %}
 import { request, chai } from "./common";
 
 describe("# Tasks", () => {
@@ -288,7 +288,7 @@ Inside the config directory I create files to configure express, the database, t
 
 An express.ts file would contain the following code:
 
-{% highlight javascript linenos %}
+{% highlight typescript linenos %}
 const dotenv = require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -309,7 +309,7 @@ export = () => {
 
 The db.ts file:
 
-{% highlight javascript linenos %}
+{% highlight typescript linenos %}
 import * as mongoose from "mongoose";
 (<any>mongoose).Promise = require("bluebird");
 let dbName;
@@ -355,7 +355,7 @@ As you could notice above in the express.ts file, the routes directory was requi
 
 We can now create an index.ts file inside the routes directory with the following content:
 
-{% highlight javascript linenos %}
+{% highlight typescript linenos %}
 export = (app) => {
 
     // Add here the routes for the controllers
@@ -383,7 +383,7 @@ There we require only the file with the routes for the tasks endpoints, but we c
 
 The tasks.ts file inside the routes directory will have the following content:
 
-{% highlight javascript linenos %}
+{% highlight typescript linenos %}
 import Task from "../controllers/tasks";
 
 export = (app) => {
@@ -498,7 +498,7 @@ Some notes about it:
 
 Now we need to define a model for our tasks. Let's create the file task.ts inside the models directory, as it was imported above in the tasks controller.
 
-{% highlight javascript linenos %}
+{% highlight typescript linenos %}
 import * as mongoose from "mongoose";
 
 export interface ITask extends mongoose.Document {
@@ -531,15 +531,14 @@ export default model;
 
 Let's create the file that will start our API. Create the file server.ts in the root of your project:
 
-{% highlight javascript linenos %}
+{% highlight typescript linenos %}
 const app = require("./config/express")();
 
 const port = process.env.PORT || 3000;
 
 const server = app.listen(port, () => {
     console.log(`Server listening on port ${port}. Environment: ${process.env.NODE_ENV}`);
-});
-{% endhighlight %}
+});{% endhighlight %}
 
 ## Running the tests and checking the code coverage
 
@@ -547,9 +546,9 @@ We are ready to run our tests and check how much of the code is covered by them.
 
 Run the following command configured in the package.json file:
 
-{% highlight bash linenos %}
+```bash
 npm test
-{% endhighlight %}
+```
 
 This will run gulp to transpile our TypeScript files to JavaScript (es6), generate the sourcemaps and then run Mocha with supertest, which in turn will access our endpoints and generate the test results.
 
