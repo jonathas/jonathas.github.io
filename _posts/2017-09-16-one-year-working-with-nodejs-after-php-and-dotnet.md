@@ -72,7 +72,7 @@ concatFiles((err, res) => {
         // Do something with the error
     } else {
         console.log("All done!");
-        // Do something else here that depends on the ab.txt files inside every directory
+        // Do something else here that depends on the ab.txt files
     }
 });
 {% endhighlight %}
