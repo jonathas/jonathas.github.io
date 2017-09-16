@@ -117,6 +117,7 @@ concatFiles().then(res => /* etc etc */ );
 {% endhighlight %}
 
 Then on ES7 we finally were allowed to make our code look normal like in some other languages, with instruction below instruction, instead of instruction inside instruction. When you have less levels of indentation, your code looks clearer and simpler. So I started refactoring all code to async/await and using util.promisify. Now it is much shorter and looks much simpler and easier to understand.
+(Code refactored by [alsiola](https://www.reddit.com/user/alsiola) on reddit)
 
 {% highlight javascript linenos %}
 const fs = require("fs");
@@ -124,19 +125,24 @@ const util = require("util");
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 
+const concatDir = async (dir) => {
+    const [a, b] = await Promise.all([
+        readFile(`${dir}/a.txt`, "utf-8"),
+        readFile(`${dir}/b.txt`, "utf-8")
+    ]);
+
+    await writeFile(`${dir}/ab.txt`, a + b);
+}
+
 const concatFiles = async () => {
     try {
-        let directories = ["dir01", "dir02", "dir03", "dir04"];
-
-        for (let dir of directories) {
-            let a = await readFile(`${dir}/a.txt`, "utf8")
-            let b = await readFile(`${dir}/b.txt`, "utf8")
-            await writeFile(`${dir}/ab.txt`, a + b);
-        }
-
-        return new Promise((resolve, reject) => resolve("All done!"));
-    } catch(err) {
-        return new Promise((resolve, reject) => reject(err));
+        const dirs = ["dir01", "dir02", "dir03", "dir04"];
+        await Promise.all(
+                dirs.map(concatDir)
+        );
+        return "All Done!";
+    } catch (err) {
+        return err;
     }
 }
 
