@@ -7,6 +7,8 @@ image:
   feature: cover-projects.jpg
 ---
 
+[This page is currently outdated. Please check my LinkedIn profile instead]
+
 Here you can find more about some of the projects I've developed during my career:
 
 - [Aulas Coletivas (Group classes)](#aulascoletivas)
