@@ -7,8 +7,6 @@ date: 2017-09-16T10:20:08+02:00
 comments: true
 image:
   feature: posts/cover-nodejs.jpg
-  credit: WallpapersWide
-  creditlink: http://wallpaperswide.com/node_js_hexagon-wallpapers.html
 ---
 
 In my software development career I've worked so far with both frontend and backend development, also with Desktop apps development (.NET) and Hybrid mobile development (Ionic Framework), but always enjoyed and focused more on the backend. I started my career in 2008 with PHP, so around this time JavaScript was mostly for creating alert messages, form validation and a bit of user interaction. Who could tell it would become what it is today?
