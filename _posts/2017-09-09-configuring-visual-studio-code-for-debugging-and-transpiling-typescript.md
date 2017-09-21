@@ -7,8 +7,6 @@ date: 2017-09-09T12:15:08+02:00
 comments: true
 image:
   feature: posts/cover-debug.jpg
-  credit: WikiHow
-  creditlink: http://www.wikihow.com/Get-Rid-of-Boxelder-Bugs-Outside
 ---
 
 Visual Studio Code comes with settings to launch node or mocha executables in order to debug our systems, and also with tasks. A task can be configured to transpile our TypeScript files to JavaScript automatically, as soon as we change them. This post is based on the configuration we did in the previous post, which was about [testing with Mocha](https://jonathas.com/tests-and-code-coverage-on-node-using-typescript-with-mocha-and-istanbul/).
