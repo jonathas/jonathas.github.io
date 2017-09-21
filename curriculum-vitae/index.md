@@ -7,8 +7,6 @@ excerpt: "My curriculum, as well as some certifications"
 tags: [curriculum, resume, cv]
 image:
   feature: cover-curriculum.jpg
-  credit: SleekCover
-  creditlink: http://www.sleekcover.com
 ---
 
 * My curriculum in <strong>English</strong>, as well as some certifications I've got, are available below
