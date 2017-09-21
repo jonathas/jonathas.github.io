@@ -6,6 +6,8 @@ body {
 	background-color: $bodycolor;
 	font-family: $base-font;
 	color: $text-color;
+	overflow-x: hidden;
+  	overflow-y: scroll;
 }
 
 /* 
