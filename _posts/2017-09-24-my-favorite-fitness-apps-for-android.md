@@ -25,7 +25,7 @@ This is one of the most well known apps out there. If you like taking long walks
 
 In my opinion this is the best workout app ever. I always use it when working out at the gym, as I've saved all my trainings and routines there. It allows you to create new workout plans by days and body parts, it has several registered exercises you can add to your routines and when you start a workout, you can log the weights you're using so you keep track of your progress. After each exercise it starts a counter for your rest time (60 seconds or 30 seconds, for example) before it shows you the next exercise on your list. The free version comes with ads but the Pro version is worth it.
 
-![Jefit](/images/posts/jefit_00.jpg "Jefit") ![Jefit](/images/posts/jefit_01.jpg "Jefit") ![Jefit](/images/posts/jefit_02.jpg "Jefit")  
+![Jefit](/images/posts/jefit_00.jpg "Jefit") ![Jefit](/images/posts/jefit_01.jpg "Jefit")
 
 [Get it on Google Play](https://play.google.com/store/apps/details?id=je.fit)
 
