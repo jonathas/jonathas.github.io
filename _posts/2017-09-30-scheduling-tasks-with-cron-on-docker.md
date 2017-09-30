@@ -21,7 +21,7 @@ In the case below I needed an Alpine Linux container with Node.js inside, as I w
 
 First we create a file called Dockerfile with the following content (yes, with no file extension):
 
-```bash
+{% highlight bash linenos %}
 FROM node:8-alpine
 MAINTAINER Jon Ribeiro <contact@jonathas.com>
 
@@ -31,7 +31,7 @@ RUN apk update && apk add tzdata &&\
     apk del tzdata && rm -rf /var/cache/apk/*
 
 CMD chown root:root /etc/crontabs/root && /usr/sbin/crond -f
-```
+{% endhighlight %}
 
 Let's save this file inside a directory called cron.
 
