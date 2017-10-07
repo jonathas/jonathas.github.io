@@ -62,7 +62,7 @@ Change the path inside the file infra/host/etc/systemd/system/mongo-backup.servi
 
 As root, copy this file to /etc/systemd/system in your server
 
-Reload the deamons:
+Reload the daemons:
 ```bash
 sudo systemctl daemon-reload
 ```
