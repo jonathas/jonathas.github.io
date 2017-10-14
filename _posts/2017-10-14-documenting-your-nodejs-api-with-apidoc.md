@@ -311,9 +311,9 @@ Now all you need to do is to run:
 gulp apidoc
 ```
 
-After that, you just need to open the index.html file inside the directory you configured in the "dest" above and you'll see something like this:
+After that, you just need to open the index.html file inside the directory you configured in the "dest" above and you'll see something like this (Click on the image below to enlarge):
 
-![apidoc](/images/posts/apidoc.png "apidoc")
+[![apidoc](/images/posts/thumbs/apidoc_tn.jpg)](/images/posts/apidoc.png)
 
 So the other developers can generate the same with gulp as well or you can even serve this generated directory via Nginx, for example.
 
