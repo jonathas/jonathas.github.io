@@ -6,7 +6,7 @@ tags: [nodejs, javascript, apidoc, documentation, html, api]
 date: 2017-10-14T11:10:08+02:00
 comments: true
 image:
-  feature: posts/cover-budapest.jpg
+  feature: posts/cover-apidoc.png
 ---
 
 When you are developing an API and one or more developers (frontend, desktop, mobile, etc) will have to integrate their code with it, it's very important to have it well documented so they know what and how they can use.
