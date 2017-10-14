@@ -287,7 +287,7 @@ npm i gulp gulp-apidoc --save-dev
 
 Then create a file called gulpfile.js in the project's root directory. If it's there already, just add the parts related to apiDoc to it:
 
-```javascript
+{% highlight javascript linenos %}
 const gulp = require("gulp");
 const apidoc = require("gulp-apidoc");
 
@@ -301,7 +301,7 @@ gulp.task("apidoc", (done) => {
 gulp.task("watch", () => {
     gulp.watch(["./routes/**"], ["apidoc"]);
 });
-```
+{% endhighlight %}
 
 You can change the "dest" there to another directory that suits you better. That's where you want the output to be generated to.
 
