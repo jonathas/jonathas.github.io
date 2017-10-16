@@ -26,3 +26,5 @@ I currently work as a Software Developer for [Mautilus](http://mautilus.com) in 
 
 * [Projects I've developed or am currently working on](http://jonathas.com/projects)
 * [My curriculum and some other resources about my career](http://jonathas.com/curriculum-vitae)
+
+In [this link](http://pgp.key-server.io/download/0x0B2EA0253B90C266) you can download my GPG Public Key.
