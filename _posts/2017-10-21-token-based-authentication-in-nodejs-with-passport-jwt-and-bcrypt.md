@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Token based authentication on Node.js with Passport, JWT and bcrypt"
+title: "Token based authentication in Node.js with Passport, JWT and bcrypt"
 excerpt: "Forget about the cookies and sessions. Time to go stateless!"
 tags: [nodejs, javascript, passport, jwt, bcrypt, api, token]
 date: 2017-10-21T13:14:08+02:00
