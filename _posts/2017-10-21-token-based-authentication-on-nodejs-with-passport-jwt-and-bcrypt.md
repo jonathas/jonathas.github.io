@@ -86,7 +86,7 @@ It's very important not to repeat this hash among your projects, as it has to be
 
 You can generate a hash using the [LastPass password generator](https://lastpass.com/generatepassword.php), for example. I recommend you to use all kinds of characters and to have the length of at least 25. An example of an .env file then would be:
 
-{% highlight bash linenos %}
+```bash
 API_BASE='/api/v1/'
 DEFAULT_TIMEZONE='Europe/Prague'
 
@@ -97,7 +97,7 @@ DB_PORT='27017'
 DB_AUTH='false'
 DB_USER=''
 DB_PASS=''
-{% endhighlight %}
+```
 
 In the config directory, let's create a db.ts file for the database connection:
 
