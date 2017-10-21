@@ -69,10 +69,10 @@ Inside the package.json file, in "scripts", let's leave it like this so istanbul
 
 Inside the test directory, create a file called mocha.opts with the following content:
 
-{% highlight bash linenos %}
+```bash
 bin/test/*_test.js
 --reporter spec
-{% endhighlight %}
+```
 
 Let's copy these files and save them to the root of our project:
 
