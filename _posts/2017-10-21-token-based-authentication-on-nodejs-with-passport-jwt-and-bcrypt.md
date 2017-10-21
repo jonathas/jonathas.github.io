@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Token based authentication on Node.js with Passport, JWT and bcrypt"
-excerpt: ""
+excerpt: "Forget about the cookies and sessions. Time to go stateless!"
 tags: [nodejs, javascript, passport, jwt, bcrypt, api, token]
 date: 2017-10-21T13:14:08+02:00
 comments: true
@@ -13,9 +13,7 @@ When you develop an API, most of times you'll need part or all of its endpoints 
 
 A combination of [passport.js](http://passportjs.org/) with JWT and bcrypt is one of the best ways to implement it. Time to go [stateless](https://www.jbspeakr.cc/purpose-jwt-stateless-authentication/)!
 
-This post is based on the authentication implemented in the TODO List API project that you can find [here](https://github.com/jonathas/todo-api).
-
-In this post, all the code is in TypeScript and I expect you to have Node.js and MongoDB already configured on your OS.
+This post is based on the authentication implemented in the TODO List API project that you can find [here](https://github.com/jonathas/todo-api). In this post, all the code is in TypeScript and I expect you to have Node.js and MongoDB already configured on your OS.
 
 ## What is Passport
 
