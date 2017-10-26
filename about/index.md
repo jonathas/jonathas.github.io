@@ -3,7 +3,7 @@ layout: page
 title: About
 tags: [about, Development, Linux, Fitness]
 modified: 2015-06-06T20:53:07.573882-04:00
-comments: true
+comments: false
 image:
   feature: cover-about.jpg
   credit: #WeGraphics
@@ -24,7 +24,8 @@ In my free time, I enjoy practicing sports such as Muay Thai (Thai Boxing) and w
 
 I currently work as a Software Developer for [Mautilus](http://mautilus.com) in Brno, Czech Republic.
 
-* [Projects I've developed or am currently working on](http://jonathas.com/projects)
-* [My curriculum and some other resources about my career](http://jonathas.com/curriculum-vitae)
+* [Projects](http://jonathas.com/projects) I've developed or am currently working on.
+
+* [My curriculum](http://jonathas.com/curriculum-vitae) and some other resources about my career
 
 In [this link](http://pgp.key-server.io/download/0x0B2EA0253B90C266) you can download my GPG Public Key.
