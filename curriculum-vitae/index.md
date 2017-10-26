@@ -15,8 +15,8 @@ image:
 
 <iframe src="https://drive.google.com/embeddedfolderview?id=0Byw5aA8CsYXmfmpKQmV4aVFOYXFCaFE3T3dhaDdwTDVVNk5sSDlRdTMzMk9tVHhTemJDVFU#list" width="650" height="220" frameBorder="0">Unfortunately your browser doesn't support this object. Please access <a href="https://drive.google.com/embeddedfolderview?id=0Byw5aA8CsYXmfmpKQmV4aVFOYXFCaFE3T3dhaDdwTDVVNk5sSDlRdTMzMk9tVHhTemJDVFU#list">this link</a> to view it's content</iframe>
 
-* [Here](http://www.freecodecamp.com/jonathas) you can check my [Free Code Camp](http://www.freecodecamp.com) profile with some algorithms and projects I've developed
+* [Places where I was featured](https://twitter.com/i/moments/923641611090825217)
 
+* My [Free Code Camp](http://www.freecodecamp.com/jonathas) profile with some algorithms and projects I've developed.
 
-* [Here](https://www.codeschool.com/users/1123575) you can check my [Code School](https://www.codeschool.com) report card with all my badges (all the courses I've taken there)
-
+* My [Code School report card](https://www.codeschool.com/users/1123575) with all my badges (all the courses I've taken there)
