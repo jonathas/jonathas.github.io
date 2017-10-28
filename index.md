@@ -1,7 +1,7 @@
 ---
 layout: home
 excerpt: "Software Development, Linux System Administration"
-tags: [Development, Linux, metalcore, opensource, freesoftware]
+tags: [Development, Linux, opensource, freesoftware]
 image:
   feature: cover-home.jpg
   credit: #Fox Grom
