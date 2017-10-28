@@ -265,6 +265,7 @@ export = () => {
                     return res.status(401).json({ message: info.message });
                 }
             }
+            app.set("user", user);
             return next();
         })(req, res, next);
     });
