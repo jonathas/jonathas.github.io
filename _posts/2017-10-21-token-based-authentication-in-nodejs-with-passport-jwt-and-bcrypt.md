@@ -150,7 +150,7 @@ Create a file named common.ts inside the test directory:
 process.env.NODE_ENV = "test";
 
 import "mocha";
-import { model as User } from "../models/user";
+import { IUser, model as User } from "../models/user";
 
 const express = require("../config/express")();
 
@@ -161,18 +161,18 @@ export const should = chai.should();
 
 const testUser = { "username": "testuser", "password": "mytestpass" };
 
-const createUser = async (): Promise<any> => {
+const createUser = async (): Promise<void> => {
     const UserModel = new User(testUser);
     await UserModel.save();
 };
 
-const getUser = async (): Promise<any> => {
+const getUser = async (): Promise<IUser> => {
     let users = await User.find({});
-    if (users === null || users.length === 0 || users === undefined) {
+    if (users.length === 0) {
         await createUser();
-        return await getUser();
+        return getUser();
     } else {
-        return new Promise((resolve, reject) => resolve(users[0]));
+        return users[0];
     }
 };
 
@@ -265,7 +265,6 @@ export = () => {
                     return res.status(401).json({ message: info.message });
                 }
             }
-            app.set("user", user);
             return next();
         })(req, res, next);
     });
