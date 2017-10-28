@@ -9,7 +9,7 @@ image:
   feature: posts/cover-authentication.jpg
 ---
 
-When you develop an API, most of times you'll need part or all of its endpoints to require authentication. How to do that using Node.js?
+When you develop an API, most of the times you'll need part or all of its endpoints to require authentication. How to do that using Node.js?
 
 A combination of [passport.js](http://passportjs.org/) with JWT and bcrypt is one of the best ways to implement it. Time to go [stateless](https://www.jbspeakr.cc/purpose-jwt-stateless-authentication/)!
 
