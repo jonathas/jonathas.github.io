@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/jonathas
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jonathas.com
+  * I am jonathas (https://keybase.io/jonathas) on keybase.
+  * I have a public key ASAVWGxij0LlnR89Z8ovoMQXWmAPAfeXRQ_SfTimRuV6Pwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012006175d5cfe5691f47e869ceb6cc958d24a26bd32747525448beb3639e8d67aee0a",
+      "host": "keybase.io",
+      "kid": "012015586c628f42e59d1f3d67ca2fa0c4175a600f01f797450fd27d38a646e57a3f0a",
+      "uid": "ff4a7b552bedf820adf4b79585d5d819",
+      "username": "jonathas"
+    },
+    "merkle_root": {
+      "ctime": 1516891414,
+      "hash": "ea9832156705d6e778f10eb802d22db7d13363bca2c4445f80ae80d9b9b295b66d0e3a65b20703cefd56a64c1d42a7933df3a70ca3ecf2f68ff3662b1db5a490",
+      "hash_meta": "ba144d17657d82eeb5247b65de79aef74aa3a32713ca8d299f9e49de526dad67",
+      "seqno": 1980054
+    },
+    "service": {
+      "hostname": "jonathas.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.40"
+  },
+  "ctime": 1516891423,
+  "expire_in": 504576000,
+  "prev": "6a5805154821e3774773b05fc797fb82c0c15f9cb480d1f059c6895f8ed0237b",
+  "seqno": 13,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgFVhsYo9C5Z0fPWfKL6DEF1pgDwH3l0UP0n04pkblej8Kp3BheWxvYWTFA0V7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMDYxNzVkNWNmZTU2OTFmNDdlODY5Y2ViNmNjOTU4ZDI0YTI2YmQzMjc0NzUyNTQ0OGJlYjM2MzllOGQ2N2FlZTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMTU1ODZjNjI4ZjQyZTU5ZDFmM2Q2N2NhMmZhMGM0MTc1YTYwMGYwMWY3OTc0NTBmZDI3ZDM4YTY0NmU1N2EzZjBhIiwidWlkIjoiZmY0YTdiNTUyYmVkZjgyMGFkZjRiNzk1ODVkNWQ4MTkiLCJ1c2VybmFtZSI6ImpvbmF0aGFzIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTE2ODkxNDE0LCJoYXNoIjoiZWE5ODMyMTU2NzA1ZDZlNzc4ZjEwZWI4MDJkMjJkYjdkMTMzNjNiY2EyYzQ0NDVmODBhZTgwZDliOWIyOTViNjZkMGUzYTY1YjIwNzAzY2VmZDU2YTY0YzFkNDJhNzkzM2RmM2E3MGNhM2VjZjJmNjhmZjM2NjJiMWRiNWE0OTAiLCJoYXNoX21ldGEiOiJiYTE0NGQxNzY1N2Q4MmVlYjUyNDdiNjVkZTc5YWVmNzRhYTNhMzI3MTNjYThkMjk5ZjllNDlkZTUyNmRhZDY3Iiwic2Vxbm8iOjE5ODAwNTR9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiam9uYXRoYXMuY29tIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuNDAifSwiY3RpbWUiOjE1MTY4OTE0MjMsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiNmE1ODA1MTU0ODIxZTM3NzQ3NzNiMDVmYzc5N2ZiODJjMGMxNWY5Y2I0ODBkMWYwNTljNjg5NWY4ZWQwMjM3YiIsInNlcW5vIjoxMywidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBZGtTziJfE17cebAdgX1Bgqa3gIVbJtic5VySjrdIwKKWpyr2xtXZ1npcdVLB2o/BJWomeOicKoc9U9mqLtrQHqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgCI1LTtyl3IfGxP/IQPTRuuCTmuw/k43LPuzSK+4kEGqjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jonathas
+
+==================================================================
