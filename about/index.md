@@ -22,7 +22,7 @@ In my free time, I enjoy practicing sports such as Muay Thai (Thai Boxing) and w
 
 ## Professional
 
-I currently work as a Software Developer for [Mautilus](http://mautilus.com) in Brno, Czech Republic.
+I currently work as a Software Engineer for [24/i](http://24i.com) in Brno, Czech Republic.
 
 * [Projects](http://jonathas.com/projects) I've developed or am currently working on.
 
