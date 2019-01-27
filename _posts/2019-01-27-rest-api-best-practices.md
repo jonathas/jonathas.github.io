@@ -21,7 +21,7 @@ First, you need to create one or more endpoints and expose them to your clients.
 
 ## HTTP methods
 
-The GET method happens when you open a website and it loads, for example.
+The GET method happens when you open a website and it retrieves an image from the server, for example.
 The POST method is often used on forms in websites, so your data is not sent in the URL (query string), but in the body of the request in this case. A RESTful API will use these two HTTP methods in their specific cases, but also some others like PUT and DELETE.
 
 Let's see some points to take into consideration when designing an API.
