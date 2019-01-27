@@ -51,10 +51,10 @@ The HTTP POST method is the one for when you want to create a resource, so the c
 
 {% highlight json linenos %}
 {
-  "termsOptions[0].key" = "optionSMS",
-  "termsOptions[0].value" = "true",
-  "termsOptions[1].key" = "optionPhone",
-  "termsOptions[1].value" = "true"
+  "termsOptions[0].key": "optionSMS",
+  "termsOptions[0].value": "true",
+  "termsOptions[1].key": "optionPhone",
+  "termsOptions[1].value": "true"
 }
 {% endhighlight %}
 
