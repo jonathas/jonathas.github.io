@@ -93,7 +93,7 @@ When any of these methods are consumed in your API, a response should be returne
 
 The HTTP protocol has a series of codes that can be used for specific cases. Many people know already (even some who don't work directly with IT), that 404 means NOT FOUND, so that's a valid HTTP code that should be returned by our API when a resource is not found.
 
-![404](/images/posts/404_room.jpg "404") ![404](/images/posts/404_room.jpg "404")  
+![404](/images/posts/404_room.jpg "404")
 
 The code 200 means OK and should be returned when the request happened successfully. It is mostly used for GET requests.
 
@@ -103,7 +103,7 @@ If when trying to create a resource, the client sent malformed data to the endpo
 
 401 is for when the client is unauthorized, 500 for when there's an internal error in the server, and so on.
 
-![HTTP status](/images/posts/http_status.jpg "HTTP status") ![HTTP status](/images/posts/http_status.jpg "HTTP status")
+![HTTP status](/images/posts/http_status.jpg "HTTP status")
 
 Unfortunately, I've seen many APIs always returning 200 OK for everything. Please be nice and don't do that, as there are codes widely used to explain each case.
 
@@ -140,7 +140,7 @@ If the new requirements will introduce a breaking change, then you can create an
 
 There's something called "Authorization" header which you can use to send your token, then there's no reason to expect that to be sent in the query string, even less in the request body.
 
-![Authorization header](/images/posts/postman_authorization_header.png "Authorization header") ![Authorization header](/images/posts/postman_authorization_header.png "Authorization header")
+![Authorization header](/images/posts/postman_authorization_header.png "Authorization header")
 
 ## Use pagination
 
@@ -156,7 +156,7 @@ Also, please use an object storage service like AWS S3 for images, for example, 
 
 You can easily check the size of the response on [Postman](https://www.getpostman.com/).
 
-![Response size](/images/posts/postman_response_size.png "Response size") ![Response size](/images/posts/postman_response_size.png "Response size")
+![Response size](/images/posts/postman_response_size.png "Response size")
 
 ## Use SSL, but don't configure that directly in your API
 
