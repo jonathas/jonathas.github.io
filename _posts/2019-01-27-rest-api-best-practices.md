@@ -192,8 +192,6 @@ For example:
 
 - Do not include unecessary data in the response. Don't expose more than you think needs exposing. If something is not needed for any client, then there's no need to expose it.
 
-- Stick to a low number of different status codes (a few of the most commonly used ones) instead of wanting to use all of them.
-
 ## Conclusion
 
 Building an API sometimes can be a complicated task, but if we follow best practices and if we are consistent and keep it simple, a lot of time can be saved and future headache avoided.
