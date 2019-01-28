@@ -58,7 +58,17 @@ The HTTP POST method is the one for when you want to create a resource, so the c
 }
 {% endhighlight %}
 
-Instead of just simply sending a stringified array. Please, keep it simple and send a stringified array instead, in cases like this one.
+Instead of just simply sending a stringified array. This would be better sent like that:
+
+{% highlight json linenos %}
+{ "termsOptions": [{"optionSMS": "true"}, {"optionPhone": "true"}] }
+{% endhighlight %}
+
+or even better, use an object instead:
+
+{% highlight json linenos %}
+{ "termsOptions": {"optionSMS": "true", "optionPhone": "true"} }
+{% endhighlight %}
 
 ### PUT
 
