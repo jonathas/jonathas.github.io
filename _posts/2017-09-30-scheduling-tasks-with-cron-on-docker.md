@@ -23,7 +23,7 @@ First we create a file called Dockerfile with the following content (yes, with n
 
 {% highlight bash linenos %}
 FROM node:8-alpine
-MAINTAINER Jon Ribeiro <contact@jonathas.com>
+MAINTAINER Jonathas Ribeiro <contact@jonathas.com>
 
 RUN apk update && apk add tzdata &&\ 
     cp /usr/share/zoneinfo/Europe/Prague /etc/localtime &&\ 

@@ -93,7 +93,7 @@ If French is your current target language, here are some of the websites that I 
 Czech
 ---
 
-![Jon and the Czech flag](/images/posts/jon_czechflag.jpg "Jon and the Czech flag")
+![Jonathas and the Czech flag](/images/posts/jon_czechflag.jpg "Jonathas and the Czech flag")
 
 And finally, if you're thinking about studying Czech, the best way is certainly by being in the country and joining a Czech course, since there's not as much online material as for other languages. I've been studying Czech because I've been living in the country and want to understand people here better, how they think and be able to communicate with them. What's also interesting about studying Czech is that other slavic languages (Slovak, Polish, Russian) start getting clearer the more you know Czech, as they share the same root.
 
