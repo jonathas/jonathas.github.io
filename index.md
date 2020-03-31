@@ -1,7 +1,7 @@
 ---
 layout: home
-excerpt: "Software Development, Linux System Administration"
-tags: [Development, Linux, opensource, freesoftware]
+excerpt: "Software Development, Design and Architecture"
+tags: [Development, Linux, opensource, freesoftware, software, architecture]
 image:
   feature: cover-home.jpg
   credit: #Fox Grom
