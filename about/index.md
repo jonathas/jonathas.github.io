@@ -13,7 +13,6 @@ image:
 Hi, I'm Jonathas Rodrigues Ribeiro (a.k.a. Jon). I was born in Rio de Janeiro, but I'm currently living in Brno, Czech Republic.
 
 I started working as a Software Developer in 2008, and since then have always been improving my knowledge while achieving my goals and the goals of the companies I work for.
-In 2020 I started working as a Solutions Architect, viewing projects from a different angle.
 
 I've been using GNU/Linux since December 2006 and I just love and feel at home with my [Arch Linux](http://archlinux.org) on my Notebook and [Debian GNU/Linux](http://debian.org) on the servers I manage at work and at home.
 
@@ -21,7 +20,7 @@ As for my hobbies, I like to take photos, really love traveling and strongly agr
 
 ## Professional
 
-I currently work as a Solutions Architect for [24i](http://24i.com) in Brno, Czech Republic.
+I currently work for [24i](http://24i.com) in Brno, Czech Republic.
 
 * For projects I've developed or am currently working on, please check my [LinkedIn profile](https://www.linkedin.com/in/jonathasribeiro/).
 
