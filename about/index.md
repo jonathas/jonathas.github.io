@@ -21,7 +21,3 @@ As for my hobbies, I like to take photos, really love traveling and strongly agr
 ## Professional
 
 I currently work for [24i](http://24i.com) in Brno, Czech Republic.
-
-* For projects I've developed or am currently working on, please check my [LinkedIn profile](https://www.linkedin.com/in/jonathasribeiro/).
-
-* [My curriculum](http://jonathas.com/curriculum-vitae) and some other resources about my career
