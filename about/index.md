@@ -10,7 +10,7 @@ image:
   creditlink: #http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
  
-Hi, I'm Jonathas Rodrigues Ribeiro (a.k.a. Jon). I was born in Rio de Janeiro, but I'm currently living in Brno, Czech Republic.
+Hi, I'm Jonathas Rodrigues Ribeiro (a.k.a. Jon). I was born in Rio de Janeiro, but I'm currently living in Prague, Czech Republic.
 
 I started working as a Software Developer in 2008, and since then have always been improving my knowledge while achieving my goals and the goals of the companies I work for.
 
@@ -20,7 +20,7 @@ As for my hobbies, I like to take photos, really love traveling and strongly agr
 
 ## Professional
 
-I currently work as a Senior Software Engineer for [CloudTalk](https://www.cloudtalk.io/) remotely from Brno, Czech Republic.
+I currently work as a Tech Lead and Senior Software Engineer for [CloudTalk](https://www.cloudtalk.io/) remotely from Prague, Czech Republic.
 
 * For projects I've developed or am currently working on, please check my [LinkedIn profile](https://www.linkedin.com/in/jonathasribeiro/).
 
