@@ -25,3 +25,12 @@ I currently work as a Tech Lead and Senior Software Engineer for [CloudTalk](htt
 * For projects I've developed or am currently working on, please check my [LinkedIn profile](https://www.linkedin.com/in/jonathasribeiro/).
 
 * [My curriculum](https://jonathas.com/curriculum-vitae) and some other resources about my career
+
+## Contact
+
+You can find below how to contact me:
+
+* You can [email me here](mailto:contact@jonathas.com)
+* [LinkedIn](https://linkedin.com/in/jonathasribeiro)
+* [Github](https://github.com/jonathas)
+* [Twitter](https://twitter.com/jonathasrr)
