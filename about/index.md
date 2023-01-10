@@ -10,11 +10,11 @@ image:
   creditlink: #http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
  
-Hi, I'm Jonathas Rodrigues Ribeiro (a.k.a. Jon). I was born in Rio de Janeiro, but I'm currently living in Prague, Czech Republic.
+Hi, I'm Jonathas Ribeiro (a.k.a. Jon). I was born in Rio de Janeiro, but I'm currently living in Prague, Czech Republic.
 
 I started working as a Software Developer in 2008, and since then have always been improving my knowledge while achieving my goals and the goals of the companies I work for.
 
-I've been using GNU/Linux since December 2006 and I just love and feel at home with my [Arch Linux](http://archlinux.org) on my Notebook and [Debian GNU/Linux](http://debian.org) on the servers I manage at work and at home.
+I've been using GNU/Linux since December 2006 and I just love and feel at home with my [Arch Linux](http://archlinux.org) on my Notebook and [Debian GNU/Linux](http://debian.org) on the servers I manage.
 
 As for my hobbies, I like to take photos, really love traveling and strongly agree that it indeed broadens one's mind.
 
