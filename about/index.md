@@ -34,3 +34,17 @@ You can find below how to contact me:
 * [LinkedIn](https://linkedin.com/in/jonathasribeiro)
 * [Github](https://github.com/jonathas)
 * [Twitter](https://twitter.com/jonathasrr)
+
+## Crypto wallets
+
+## Bitcoin
+
+![Bitcoin](../images/btc.png "bc1q2x822zx4q4yamygygndwv4hzrrsz0suv84fh5t")
+
+bc1q2x822zx4q4yamygygndwv4hzrrsz0suv84fh5t
+
+## Ethereum
+
+![Ethereum](../images/eth.png "0x47B76be211f82137de076D9723596Bab88A76AAa")
+
+0x47B76be211f82137de076D9723596Bab88A76AAa
