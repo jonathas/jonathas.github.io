@@ -186,25 +186,7 @@ Ps: You'll need to, of course, configure this sync between Github and Jira separ
 Using Github Actions, it's easy to implement a workflow that checks the Pull Request title and validates it against the Conventional Commits specification.
 
 File: **.github/workflows/lint-pr-title.yml**
-
-```
-name: "Lint PR Title"
-on:
-  pull_request_target:
-    types:
-      - opened
-      - edited
-      - synchronize
-
-jobs:
-  lint-pr-title:
-    if: ${{ github.actor != 'dependabot[bot]' }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: dreampulse/action-lint-pull-request-title@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
+You can find the gist with the code [here](https://gist.github.com/jonathas/0fa8c8063d8b9317a9b6e53cb7ec6450).
 
 Whenever a PR is created, this workflow runs and doesn't allow the PR to be merged if the title is incorrect.
 
