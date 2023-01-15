@@ -258,7 +258,7 @@ A [release branch](https://www.atlassian.com/git/tutorials/comparing-workflows/g
 
 Then after that, the release process can be started manually with the help of the [release-it](https://www.npmjs.com/package/release-it) wizard or the Github Action can pick it up, run the release-it lib inside of it in automated mode and do what else needs to be done for deployment. We'll talk more about this part below, so keep reading.
 
-The release process should be started on the master/main branch.
+> The release process should always be started on the master/main branch and then synched back to develop.
 
 ### Rolling back
 
