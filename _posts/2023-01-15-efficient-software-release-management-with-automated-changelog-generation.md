@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Efficient Software Release Management with Automated Changelog Generation"
-excerpt: "In this article, we'll explore how automated changelog generation, commitlint and git hooks can help optimize the software release process."
+excerpt: "A development and release process with automated changelog generation and how to configure it"
 tags: [software release process, automated changelog generation, commitlint, git hooks, release, conventional commits, release-it]
 date: 2023-01-15T22:10:08+01:00
 comments: true
