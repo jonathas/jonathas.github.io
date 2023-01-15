@@ -3,7 +3,7 @@ layout: post
 title: "Efficient Software Release Management with Automated Changelog Generation"
 excerpt: "In this article, we'll explore how automated changelog generation, commitlint and git hooks can help optimize the software release process."
 tags: [software release process, automated changelog generation, commitlint, git hooks, release, conventional commits, release-it]
-date: 2023-01-15T15:22:08+01:00
+date: 2023-01-15T22:10:08+01:00
 comments: true
 image:
   feature: posts/release-process/cover-release-process.jpg
@@ -16,7 +16,7 @@ The software release process is a critical aspect of any software development pr
 ## Notes
 
 - When I mention the "master/main" branch, it can be either master or main, depending on what you agreed with your team.
-- When I mention Github Actions it can also be done in any other CI/CD tool
+- When I mention Github Actions it can also be done in any other CI/CD service or software
 
 ## In this article
 
@@ -275,7 +275,7 @@ A [release branch](https://www.atlassian.com/git/tutorials/comparing-workflows/g
 
 Then after that, the release process can be started manually with the help of the [release-it](https://www.npmjs.com/package/release-it) wizard or the Github Action can pick it up, run the release-it lib inside of it in automated mode and do what else needs to be done for deployment. We'll talk more about this part below, so keep reading.
 
-The release process needs to be started on the master/main branch.
+The release process should be started on the master/main branch.
 
 ### Rolling back
 
@@ -374,7 +374,7 @@ Install the auto-changelog library:
 npm i auto-changelog --save-dev
 ```
 
-And that's it.
+And that's it, as the integration is already configured with release-it.
 
 ## Further improvements
 
@@ -384,4 +384,4 @@ The release-it library allows us to add a post release hook that could be integr
 
 ## Conclusion
 
-By using the tools and processes presented in this article, development teams can improve the software release process and deliver high-quality software faster with efficiency, better accuracy and quality.
+By using the tools and processes presented in this article, development teams can improve the software release process and deliver high-quality software faster with efficiency, better accuracy and quality. Do you have any idea for improvement or have you been working differently? Let me know in the comments and let's discuss so I can learn more from your experience as well!
