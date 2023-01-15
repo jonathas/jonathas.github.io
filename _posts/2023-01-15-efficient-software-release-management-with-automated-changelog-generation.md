@@ -128,7 +128,7 @@ Add the pre-commit hook that runs the linter:
 npx husky add .husky/pre-commit "npm run lint"
 ```
 
-Ps: My eslintrc example can be found [here](https://gist.github.com/jonathas/c6b5f110e1eaf92d94ac976a19a3a178).
+> Ps: My eslintrc example can be found [here](https://gist.github.com/jonathas/c6b5f110e1eaf92d94ac976a19a3a178).
 
 Add the commit-msg hook that runs commitlint:
 
