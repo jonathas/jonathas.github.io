@@ -165,7 +165,7 @@ if it's a fix:
 ### Pull Request title
 
 When the developer is ready to submit changes to the repository, a new Pull Request needs to be created.
-The Pull Request title, matters more than the name of the branch, since that's what will end up in our git history and, consequently in our automatically generated changelog! Hence, when creating a Pull Request, its name must follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0) specification.
+The Pull Request title matters more than the name of the branch, since that's what will end up in our git history and, consequently in our automatically generated changelog! Hence, when creating a Pull Request, its name must follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0) specification.
 
 An example of how the PRs following Conventional Commits would look like in the repository history:
 
