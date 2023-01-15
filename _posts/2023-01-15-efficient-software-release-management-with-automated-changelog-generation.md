@@ -13,6 +13,8 @@ image:
 
 The software release process is a critical aspect of any software development project. A manual software release process can be time-consuming, error-prone, and often leaves room for human error. This is where an automated release process comes in. The tools mentioned in this article (used in TypeScript/Javascript projects) can help streamline and optimize the software release process, making it more efficient and less prone to errors, by reducing human involvement.
 
+The importance of the items and the order in which the items are presented in this article, is that each of them is part of the final result which we wish to achieve. In the end you'll see they all match together to make the development and release process work.
+
 ## Notes
 
 - When I mention the "master/main" branch, it can be either master or main, depending on what you agreed with your team.
