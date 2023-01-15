@@ -189,7 +189,7 @@ Using Github Actions, it's easy to implement a workflow that checks the Pull Req
 
 File: **.github/workflows/lint-pr-title.yml**
 
-```yaml
+{% highlight yaml linenos %}
 name: "Lint PR Title"
 on:
   pull_request_target:
@@ -206,7 +206,7 @@ jobs:
       - uses: dreampulse/action-lint-pull-request-title@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
+{% endhighlight %}
 
 Whenever a PR is created, this workflow runs and doesn't allow the PR to be merged if the title is incorrect.
 
