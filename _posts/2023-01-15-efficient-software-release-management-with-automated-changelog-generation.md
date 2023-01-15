@@ -13,6 +13,11 @@ image:
 
 The software release process is a critical aspect of any software development project. A manual software release process can be time-consuming, error-prone, and often leaves room for human error. This is where an automated release process comes in. The tools mentioned in this article (used in TypeScript/Javascript projects) can help streamline and optimize the software release process, making it more efficient and less prone to errors, by reducing human involvement.
 
+## Notes
+
+- When I mention the "master/main" branch, it can be either master or main, depending on what you agreed with your team.
+- When I mention Github Actions it can also be done in any other CI/CD tool
+
 ## In this article
 
 1. [Versioning](#versioning)
@@ -31,8 +36,11 @@ The software release process is a critical aspect of any software development pr
     - [Deployment to Production](#deployment-to-production)
     - [Rolling back](#rolling-back)
 6. [Creating a Release](#creating-a-release)
-    - Automatic changelog generation
-    - Automatically posting the changelog to Slack
+    - [Configuring release-it](#configuring-release-it)
+7. [Automatic Changelog generation](#automatic-changelog-generation)
+    - [Configuring auto-changelog](#configuring-auto-changelog)
+8. [Further improvements](#further-improvements)
+9. [Conclusion](#conclusion)
 
 ## Versioning
 
@@ -243,6 +251,7 @@ These are recommended to be added to the repository:
 - Run unit tests
 - SonarCloud Code Analysis
 
+Bear in mind that if you have dependabot enabled in your repository, it's usually a good idea to change the validations above so that they don't run on PRs created by dependabot. Otherwise you'll see a big increase in Github Actions minutes.
 I won't go deeper in details about them as it's not the focus of this article.
 
 ### Deployment to Staging
@@ -254,20 +263,24 @@ From "[What is a Staging Environment?](https://umbraco.com/knowledge-base/stagin
 >Testing new changes on a staging environment before deploying them to your live website also reduces the risk of any errors or issues that will affect your users. This effectively means happier users and more uptime for your website.
 
 The deployment to Staging should happen every time a PR or commit is merged to the **develop branch**.
-This can be done by configuring your CI/CD pipeline (Github Actions, for example) to start and handle the deployment once that happens.
+This can be done by configuring Github Actions, for example, to start and handle the deployment once that happens.
 
 ### Deployment to Production
 
 If there's no well defined process yet for deployments to production, it's always good to follow the golden rule of "no deployments on Fridays!"
 
+Whenever we want to deploy to production, a release needs to be created.
+
 A [release branch](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) can be created out of the develop branch, then a PR can be created so that after it's approved it's merged to the master/main branch.
 
-Then after that, the release process can be started manually with the help of the [release-it](https://www.npmjs.com/package/release-it) wizard the CI/CD pipeline can pick it up or the CI/CD pipeline (Github Actions, for example) can pick it up, run the release-it lib inside of it in automated mode and do what else needs to be done for deployment. We'll talk more about this part below, keep reading.
+Then after that, the release process can be started manually with the help of the [release-it](https://www.npmjs.com/package/release-it) wizard or the Github Action can pick it up, run the release-it lib inside of it in automated mode and do what else needs to be done for deployment. We'll talk more about this part below, so keep reading.
+
+The release process needs to be started on the master/main branch.
 
 ### Rolling back
 
 In case the release breaks production even after all the status checks and QA approval, we need to have a way to rollback what is deployed to production to a stable version.
-This can be done via a CI/CD job (Github action workflow, for example), which exists for this purpose and can be started manually.
+This can be done via a Github action workflow, which exists for this purpose and can be started manually.
 
 From the repository, the developer should be able to select which branch this workflow should run from, so that this branch with the fix replaces what is in production.
 Or this workflow can instead always revert the master/main branch to the previous version. It's a good idea to decide with your team how this process will be handled in your specific case.
@@ -276,7 +289,7 @@ Or this workflow can instead always revert the master/main branch to the previou
 
 Finally after all is configured in the repository and the team is following a well defined development process, it's time to talk about creating the release!
 
-Whenever we want to deploy to production, a release needs to be created. This process is handled by the [release-it](https://www.npmjs.com/package/release-it) library, which can be used in two ways:
+ This process is handled by the [release-it](https://www.npmjs.com/package/release-it) library, which can be used in two ways:
 
 1. Manually: One of the developers runs ```npm run release``` locally, which starts the release-it wizard, which in turn takes care of what's needed.
 2. Automatically via CI/CD: After the PR is merged, the Github Action with the release-it library starts from there and takes care of what's needed.
@@ -292,6 +305,83 @@ When the release-it library starts, it:
 7. Creates a Github release
 8. Merges the master/main branch back to develop and pushes develop, to keep the branches in sync
 
+![Release It](/images/posts/release-process/release-it-example.png "Release It")
+
+### Configuring release-it
+
+Install the release-it library:
+
+```bash
+npm i release-it --save-dev
+```
+
+Add the following to the "scripts" part of the package.json file to enable the ```npm run release``` command:
+
+```
+"release": "release-it",
+```
+
+Create a .release-it.json file on the root of your project:
+
+```json
+{
+  "hooks": {
+    "before:init": ["npm test"],
+    "after:bump": ["npx auto-changelog -p"],
+    "after:git:release": ["git checkout develop", "git merge master", "git push origin develop"]
+  },
+  "git": {
+    "requireBranch": "master",
+    "commit": true,
+    "commitMessage": "chore(release): ${version}",
+    "commitArgs": "",
+    "tag": true,
+    "tagName": "${version}",
+    "tagAnnotation": "${version}",
+    "push": true,
+    "requireCommits": true,
+    "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs"
+  },
+  "github": {
+    "release": true,
+    "releaseName": "${version}",
+    "tokenRef": "GITHUB_TOKEN"
+  },
+  "npm": {
+    "publish": false
+  }
+}
+```
+
+Ps: If your project is an npm library, you can also make release-it push it to npmjs.com automatically by changing npm.publish to true in the config above.
+
+## Automatic Changelog generation
+
+With the use of the release-it library, the changelog is generated automatically during the release process. Every item in git history from the last version until now is added to the beginning of the CHANGELOG.md file in the root of the project. It's important that the previous steps mentioned in this article are followed so that the resulting changelog is well formatted.
+
+The automatically generated changelog looks like the following:
+
+![Changelog](/images/posts/release-process/changelog.png "Changelog")
+[CHANGELOG.md](https://github.com/jonathas/hockeytech/blob/develop/CHANGELOG.md)
+
+As the changelog file is in Markdown format, it also contains links to the specific PRs.
+
+### Configuring auto-changelog
+
+Install the auto-changelog library:
+
+```bash
+npm i auto-changelog --save-dev
+```
+
+And that's it.
+
+## Further improvements
+
+As an idea for further improvement, in case your company has a Slack channel where people need to post changelogs to, you can extend the idea presented in this article to post the automatically generated changelog to Slack.
+
+The release-it library allows us to add a post release hook that could be integrated with that or it can be done via a job in the same Github Actions workflow.
+
 ## Conclusion
 
-In conclusion, the software release process is a critical aspect of software development, but it can be time-consuming, error-prone and often leaves room for human error. Automated changelog generation, commitlint, and git hooks are tools that can help streamline and optimize the software release process, making it more efficient and less prone to errors. By using these tools, teams can improve the software release process and deliver high-quality software faster and with fewer mistakes. If you want to optimize your software release process, consider implementing automated changelog generation, commitlint and git hooks. These tools can help you improve the efficiency, accuracy and quality of your software release process.
+By using the tools and processes presented in this article, development teams can improve the software release process and deliver high-quality software faster with efficiency, better accuracy and quality.
