@@ -19,7 +19,7 @@ The software release process is a critical aspect of any software development pr
 2. [A convention to use in all commits](#a-convention-to-use-in-all-commits)
 3. [Making sure that the Conventional Commit rules are followed](#making-sure-that-the-conventional-commit-rules-are-followed)
 4. [Local Git hooks](#local-git-hooks)
-    - [Configuring](#configuring)
+    - [Configuring husky](#configuring-husky)
 5. [Way of working](#way-of-working)
     - [Branch naming conventions](#branch-naming-conventions)
     - [Pull Request title](#pull-request-title)
@@ -27,6 +27,12 @@ The software release process is a critical aspect of any software development pr
     - [Pull Request content](#pull-request-content)
     - [Merging strategy](#merging-strategy)
     - [Status checks on Pull Requests](#status-checks-on-pull-requests)
+    - [Deployment to Staging](#deployment-to-staging)
+    - [Deployment to Production](#deployment-to-production)
+    - [Rolling back](#rolling-back)
+6. [Creating a Release](#creating-a-release)
+    - Automatic changelog generation
+    - Automatically posting the changelog to Slack
 
 ## Versioning
 
@@ -93,7 +99,7 @@ The hooks I usually configure are: pre-commit, commit-msg and pre-push
 - **commit-msg**: When the developer writes the commit message, it is automatically checked against commitlint, which validates the commit message against the Conventional Commits specification. If the commit message is not valid, the commit doesn't happen until the message is fixed.
 - **pre-push**: When the developer tries to push the commit(s) to the repository, the pre-push hook is called automatically and runs "npm test". The push to the repository only happens if all tests are passing.
 
-### Configuring
+### Configuring husky
 
 Install the husky library as a dev dependency:
 
@@ -238,6 +244,53 @@ These are recommended to be added to the repository:
 - SonarCloud Code Analysis
 
 I won't go deeper in details about them as it's not the focus of this article.
+
+### Deployment to Staging
+
+From "[What is a Staging Environment?](https://umbraco.com/knowledge-base/staging-environment/)"
+
+> A staging environment or staging site is a copy of your live website and is the last step in the deployment process before changes are deployed to your live website.
+> By having a staging environment that is a copy of your live environment you are able to test new changes made by your developers before they are released to your live website. Using multiple environments is not necessary, but it comes with a long list of advantages, which are especially important if you work on big or complex projects.
+>Testing new changes on a staging environment before deploying them to your live website also reduces the risk of any errors or issues that will affect your users. This effectively means happier users and more uptime for your website.
+
+The deployment to Staging should happen every time a PR or commit is merged to the **develop branch**.
+This can be done by configuring your CI/CD pipeline (Github Actions, for example) to start and handle the deployment once that happens.
+
+### Deployment to Production
+
+If there's no well defined process yet for deployments to production, it's always good to follow the golden rule of "no deployments on Fridays!"
+
+A [release branch](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) can be created out of the develop branch, then a PR can be created so that after it's approved it's merged to the master/main branch.
+
+Then after that, the release process can be started manually with the help of the [release-it](https://www.npmjs.com/package/release-it) wizard the CI/CD pipeline can pick it up or the CI/CD pipeline (Github Actions, for example) can pick it up, run the release-it lib inside of it in automated mode and do what else needs to be done for deployment. We'll talk more about this part below, keep reading.
+
+### Rolling back
+
+In case the release breaks production even after all the status checks and QA approval, we need to have a way to rollback what is deployed to production to a stable version.
+This can be done via a CI/CD job (Github action workflow, for example), which exists for this purpose and can be started manually.
+
+From the repository, the developer should be able to select which branch this workflow should run from, so that this branch with the fix replaces what is in production.
+Or this workflow can instead always revert the master/main branch to the previous version. It's a good idea to decide with your team how this process will be handled in your specific case.
+
+## Creating a Release
+
+Finally after all is configured in the repository and the team is following a well defined development process, it's time to talk about creating the release!
+
+Whenever we want to deploy to production, a release needs to be created. This process is handled by the [release-it](https://www.npmjs.com/package/release-it) library, which can be used in two ways:
+
+1. Manually: One of the developers runs ```npm run release``` locally, which starts the release-it wizard, which in turn takes care of what's needed.
+2. Automatically via CI/CD: After the PR is merged, the Github Action with the release-it library starts from there and takes care of what's needed.
+
+When the release-it library starts, it:
+
+1. Identifies which commits happened after the last version
+2. Bumps the version in package.json following the Semver convention
+3. Adds the changelog related to the new version to the CHANGELOG.md file (using the [auto-changelog](https://www.npmjs.com/package/auto-changelog) library)
+4. Creates a commit with the new version. For example: ```chore(release): 0.3.1```
+5. Creates a Git tag with the version
+6. Pushes these changes to the master/main branch of the repository
+7. Creates a Github release
+8. Merges the master/main branch back to develop and pushes develop, to keep the branches in sync
 
 ## Conclusion
 
