@@ -187,7 +187,7 @@ Using Github Actions, it's easy to implement a workflow that checks the Pull Req
 
 File: **.github/workflows/lint-pr-title.yml**
 
-```yaml
+```
 name: "Lint PR Title"
 on:
   pull_request_target:
