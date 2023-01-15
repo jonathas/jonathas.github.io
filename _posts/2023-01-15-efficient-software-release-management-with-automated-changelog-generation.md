@@ -148,7 +148,7 @@ After these steps, commit the .husky directory to the git repository.
 
 For the automated changelog generation to work well, it's important to have a well defined development process.
 
-When a developer starts to work on this ticket, a new branch needs to be created in the git repository. This branch must be created out of the **develop branch**.
+When a developer starts to work on a ticket, a new branch needs to be created in the git repository. This branch must be created out of the **develop branch**.
 
 ### Branch naming conventions
 
