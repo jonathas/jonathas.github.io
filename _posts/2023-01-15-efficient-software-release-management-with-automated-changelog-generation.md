@@ -152,7 +152,7 @@ When a developer starts to work on a ticket, a new branch needs to be created in
 
 ### Branch naming conventions
 
-The name of this new branch that the developer will create can be anything. It doesn't really matter in this case, as it must be automatically deleted after the PR is merged anyway. What I recommend, though, is to follow a similar format to what is done in the commits, so that it's easy to identify what that branch is about.
+The name of this new branch that the developer will create can be anything. It doesn't really matter in this case, as it must be automatically deleted after the PR is merged so that the repository doens't become a mess of hundreds or thousands of branches. What I recommend, though, is to follow a similar format to what is done in the commits, so that it's easy to identify what that branch is about.
 
 For example, if it's a new feature:
 
