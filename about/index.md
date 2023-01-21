@@ -1,8 +1,8 @@
 ---
 layout: page
 title: About
-tags: [about, Development, Linux, Fitness]
-modified: 2015-06-06T20:53:07.573882-04:00
+tags: [Software Development, Linux, Arch Linux, Debian, PHP, .NET, Angular, Typescript, Java, Spring, React, Node.js, JavaScript]
+modified: 2023-01-21T18:47:07.573882+01:00
 comments: false
 image:
   feature: cover-about.jpg
@@ -10,13 +10,15 @@ image:
   creditlink: #http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
  
-Hi, I'm Jonathas Ribeiro (a.k.a. Jon). I was born in Rio de Janeiro, but I'm currently living in Prague, Czech Republic.
+Hey there! I'm Jonathas Ribeiro (but you can call me Jon). I was born in Rio de Janeiro but have been living in the Czech Republic since 2015.
 
-I started working as a Software Developer in 2008, and since then have always been improving my knowledge while achieving my goals and the goals of the companies I work for.
+I've been working as a Software Developer since 2008 and have experience with a variety of technologies such as PHP, .NET, Ionic Framework, Angular, Java/Spring, React, and Node.js. My journey with programming began as a teenager when I would hack HTML, CSS, and JavaScript to build websites.
 
-I've been using GNU/Linux since December 2006 and I just love and feel at home with my [Arch Linux](http://archlinux.org) on my Notebook and [Debian GNU/Linux](http://debian.org) on the servers I manage.
+Throughout my career, I have worked on several software projects in various industries including fitness, video streaming and TV apps, VoIP, e-commerce, fashion, and finances. My work has been used by people in countries such as the USA, Brazil, and throughout Europe.
 
-As for my hobbies, I like to take photos, really love traveling and strongly agree that it indeed broadens one's mind.
+I have been using Linux since 2006 and have a special love for Arch Linux and Debian. In my free time, you'll find me taking photos, playing videogames, watching series, going to the gym for boxing and weightlifting or traveling.
+
+Thanks for visiting my website, and I hope you enjoy exploring the content here!
 
 ## Professional
 
@@ -34,17 +36,3 @@ You can find below how to contact me:
 * [LinkedIn](https://linkedin.com/in/jonathasribeiro)
 * [Github](https://github.com/jonathas)
 * [Twitter](https://twitter.com/jonathasrr)
-
-## Crypto wallets
-
-## Bitcoin
-
-![Bitcoin](../images/btc.png "bc1q2x822zx4q4yamygygndwv4hzrrsz0suv84fh5t")
-
-bc1q2x822zx4q4yamygygndwv4hzrrsz0suv84fh5t
-
-## Ethereum
-
-![Ethereum](../images/eth.png "0x47B76be211f82137de076D9723596Bab88A76AAa")
-
-0x47B76be211f82137de076D9723596Bab88A76AAa
