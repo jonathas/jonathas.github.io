@@ -31,11 +31,11 @@ A country flag there looks nicer to me instead of the language. After this scrip
 
 Ps: Other keyboard layouts/languages are also available
 
-The switcher now looks like this:
+### The switcher now looks like this
 
 ![Keyboard Layout switcher](/images/posts/keyboard-layout-indicator/keyboard-layout-switcher.jpg "Keyboard Layout switcher")
 
-In context:
+### In context
 
 ![Keyboard Layout screenshot](/images/posts/keyboard-layout-indicator/keyboard-layout-screenshot.jpg "Keyboard Layout screenshot")
 
