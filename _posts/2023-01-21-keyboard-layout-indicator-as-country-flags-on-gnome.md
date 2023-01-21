@@ -11,7 +11,7 @@ image:
   creditlink: https://pngtree.com/free-backgrounds
 ---
 
-[Gnome](https://www.gnome.org/) is a free and open-source desktop environment for Linux and Unix-like operating systems. It is one of the most popular desktop environments for Linux, and is the default desktop environment for many Linux distributions such as [Ubuntu](https://ubuntu.com/), [Fedora](https://getfedora.org/) and [Debian](https://www.debian.org/). Gnome is known for its simplicity, ease of use and a user-friendly interface. It is designed to be easy to use for people of all ages and skill levels and it's also fully themeable and customizable.
+[Gnome](https://www.gnome.org/) is a free and open-source desktop environment for Linux and Unix-like operating systems. It is one of the most popular desktop environments for Linux, and is the default desktop environment for many Linux distributions. Gnome is known for its simplicity, ease of use and a user-friendly interface. It is designed to be easy to use for people of all ages and skill levels and it's also fully themeable and customizable.
 
 One of the features that Gnome used to offer was the ability to display country flags as the keyboard layout indicator. This feature was present in earlier versions of Gnome, but was removed in later versions. The thing is, users don't always agree with the decisions a product takes, so in this case as the product is open-source and highly configurable, it's much easier to customize it to our liking.
 
