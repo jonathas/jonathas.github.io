@@ -51,7 +51,7 @@ Composite indexes involve multiple columns, optimizing queries that filter on mu
 
 ## Practical examples
 
-Theory yada-yada.. let's see some examples:
+Theory yada-yada.. let's see some examples.
 
 Continuing on the library idea that  was mentioned before, we have the following tables represented in SQL below:
 
