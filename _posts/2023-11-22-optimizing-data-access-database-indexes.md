@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Optimizing Data Access: A Deep Dive into Database Indexes"
-excerpt: ""
+excerpt: "Discover effective ways to speed up data searches in your database by exploring database indexes."
 tags: [database, indexes, sql, mysql, postgres]
 date: 2023-11-23T17:30:08+01:00
 comments: true
@@ -11,17 +11,17 @@ image:
   creditlink: https://pngtree.com/free-backgrounds
 ---
 
-When talking about database optimization, the efficiency of retrieving information is crucial. One key player in this quest for efficiency is the database index. Let's dive into the world of database indexes and uncover what happens under the hood.
+When considering database optimization, the efficiency of retrieving information is crucial. One key player in this quest for efficiency is the database index. Let's dive into the world of database indexes and uncover what happens under the hood.
 
 ## In this article
 
-- What are Database Indexes?
-- Types of Indexes
-- Trade-offs and Considerations
-- Practical examples
-  - Inserting some data
-  - Examples of index usage
-- What should be considered when improving index usage
+- [What are Database Indexes?](#what-are-database-indexes)
+- [Types of Indexes](#types-of-indexes)
+- [Trade-offs and Considerations](#trade-offs-and-considerations)
+- [Practical examples](#practical-examples)
+  - [Inserting some data](#inserting-some-data)
+  - [Examples of index usage](#examples-of-index-usage)
+- [What should be considered when improving index usage](#what-should-be-considered-when-improving-index-usage)
 
 ## What are Database Indexes?
 
@@ -177,4 +177,4 @@ Some bad examples of index usage are:
 
 ## Conclusion
 
-When considering to optimize your database, understanding how indexes work is essential. They are very important for efficient data rtrieval, but their effectiveness depends on factors such as selectivity, indexing strategies and mantenance challenges.
+When considering to optimize your database, understanding how indexes work is essential. They are very important for efficient data retrieval, but their effectiveness depends on factors such as selectivity, indexing strategies and mantenance challenges.
