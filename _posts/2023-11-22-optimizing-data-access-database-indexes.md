@@ -25,7 +25,7 @@ When considering database optimization, the efficiency of retrieving information
 
 ## What are Database Indexes?
 
-At its core, a database index is a data structure that provides a faster way to locate rows in a table based on the values in one or more columns. Imagine a well-organized library where books are arranged by genres or authors. This way or organizing them significantly accelerates the process of finding a specific book. In a similar way, a database index works as a roadmap, guiding the database engine to the relevant rows in a table.
+At its core, a database index is a data structure that provides a faster way to locate rows in a table based on the values in one or more columns. Imagine a well-organized library where books are arranged by genres or authors. This way of organizing them significantly accelerates the process of finding a specific book. In a similar way, a database index works as a roadmap, guiding the database engine to the relevant rows in a table.
 
 Most database indexes utilize a B-tree (balanced tree) structure. This structure allows for efficient insertion, deletion, and search operations. Each entry in the index is a key-value pair, with the key representing the indexed column(s) and the value pointing to the corresponding row in the table.
 
@@ -34,8 +34,8 @@ Most database indexes utilize a B-tree (balanced tree) structure. This structure
 Database indexes can be created manually by administrators or automatically by the database management system (DBMS). Indexes can be applied to one or more columns, and there are various types to cater to different needs:
 
 - Unique Indexes: Ensure the uniqueness of values in the indexed columns, preventing duplicate entries.
-- Clustered Indexes: Determine the physical order of data rows in the table based on the index, influencing data storage layout.
-- Non-clustered Indexes: Create a separate structure for the index, leaving the data rows unchanged.
+- Clustered Indexes: Determine the physical order of data rows in the table based on the index, influencing data storage layout. In a clustered index, the rows in the table are stored in the same order as the index. Each table can have only one clustered index.
+- Non-clustered Indexes: Create a separate structure for the index, leaving the data rows unchanged. Unlike a clustered index, a non-clustered index does not affect the physical order of the rows in the table and allows for the creation of multiple non-clustered indexes on a single table.
 
 When a query involving the indexed column(s) is executed, the database engine utilizes the index to quickly locate the relevant rows. This process reduces the need to scan the entire table, resulting in a significant reduction in disk I/O operations. B-tree indexes, often sorted, enable efficient range queries, making them particularly powerful in enhancing read operation performance.
 
@@ -45,7 +45,7 @@ While database indexes offer immense benefits in terms of query performance, the
 
 Updating or deleting data in indexed columns requires corresponding updates to the index to maintain accuracy. Periodic rebuilding or reorganizing of indexes may be necessary to optimize their performance over time.
 
-Indexes with high a large number of unique values are more effective in improving query performance.
+Indexes with high selectivity (a large number of unique values) are more effective in improving query performance.
 
 Composite indexes involve multiple columns, optimizing queries that filter on multiple criteria.
 
@@ -53,7 +53,7 @@ Composite indexes involve multiple columns, optimizing queries that filter on mu
 
 Theory yada-yada.. let's see some examples:
 
-Continuing on the library idea that  was mentioned before, we have the following tables:
+Continuing on the library idea that  was mentioned before, we have the following tables represented in SQL below:
 
 ### Authors
 
@@ -177,4 +177,4 @@ Some bad examples of index usage are:
 
 ## Conclusion
 
-When considering to optimize your database, understanding how indexes work is essential. They are very important for efficient data retrieval, but their effectiveness depends on factors such as selectivity, indexing strategies and mantenance challenges.
+When considering to optimize your database, understanding how indexes work is essential. They are very important for efficient data retrieval, but their effectiveness depends on factors such as selectivity, indexing strategies and maintenance challenges.
