@@ -22,6 +22,7 @@ When considering database optimization, the efficiency of retrieving information
   - [Inserting some data](#inserting-some-data)
   - [Examples of index usage](#examples-of-index-usage)
 - [What should be considered when improving index usage](#what-should-be-considered-when-improving-index-usage)
+- [Conclusion](#conclusion)
 
 ## What are Database Indexes?
 
