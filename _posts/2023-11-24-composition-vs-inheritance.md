@@ -183,7 +183,7 @@ This approach provides:
 - Code reusability, as the Logger class can be reused in other contexts as well, making it modular and reusable
 - Maintainability: Changes to the Logger class do not affect the functionality of other classes, reducing side effects.
 
-If we used instead inheritance for this:
+If instead we used inheritance for this:
 
 ```typescript
 // Using inheritance
