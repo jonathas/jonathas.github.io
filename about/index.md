@@ -22,7 +22,7 @@ Thanks for visiting my website, and I hope you enjoy exploring the content here!
 
 ## Professional
 
-I currently work as a Tech Lead and Senior Software Engineer for [CloudTalk](https://www.cloudtalk.io/) remotely from Prague, Czech Republic.
+I currently work as a Senior Software Engineer for [Vacasa](https://www.vacasa.com/) in Prague, Czech Republic.
 
 * For projects I've developed or am currently working on, please check my [LinkedIn profile](https://www.linkedin.com/in/jonathasribeiro/).
 
