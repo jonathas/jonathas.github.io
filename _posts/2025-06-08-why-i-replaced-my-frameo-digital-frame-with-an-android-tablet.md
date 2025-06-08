@@ -5,6 +5,8 @@ excerpt: "My digital photo frame kept crashing and limiting uploads, so I replac
 tags: [android-tablet, frameo-alternative, fotoo, digital-photo-frame, lenovo-yoga-tab-11, localsend, google-photos, frameo-issues, photo-backup, diy-tech]
 date: 2025-06-08T10:10:08+02:00
 comments: true
+image:
+  feature: posts/frameo-vs-fotoo/cover-frames.jpg
 ---
 
 Having a digital photo frame at home has always been a nice way to keep our memories alive. Over the years, I've collected thousands of photos from family trips, special events, and everyday moments. This turned our digital frame into a slideshow of our best experiences. However, recently, I had issues with my Frameo-powered digital frame, leading me to look for a better solution. Here's how I moved to a Lenovo Yoga Tab 11 running Fotoo and why it’s been a much better choice.
