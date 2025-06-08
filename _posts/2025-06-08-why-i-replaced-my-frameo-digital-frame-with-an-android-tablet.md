@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I Replaced My Frameo Digital Frame with an Android Tablet"
-excerpt: "After years of using a digital photo frame with Frameo, I finally made the switch to a used Android tablet running Fotoo—and the difference has been huge. In this post, I share why I replaced my Frameo setup, the problems I faced, and how my new system using a Lenovo Yoga Tab 11, LocalSend, and Google Photos solved them all while giving me more control and better performance, with no subscription required."
+excerpt: "My digital photo frame kept crashing and limiting uploads, so I replaced it with an Android tablet running Fotoo—free cloud backup, no slowdowns."
 tags: [android-tablet, frameo-alternative, fotoo, digital-photo-frame, lenovo-yoga-tab-11, localsend, google-photos, frameo-issues, photo-backup, diy-tech]
 date: 2025-06-08T10:10:08+02:00
 comments: true
