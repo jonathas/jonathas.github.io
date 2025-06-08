@@ -15,7 +15,7 @@ Having a digital photo frame at home has always been a nice way to keep our memo
 
 ### The Issues with Frameo
 
-![Frameo](/images/posts/frameo-vs-fotoo/frameo.jpg "Frameo")
+<img src="/images/posts/frameo-vs-fotoo/frameo.jpg" alt="Frameo" title="Frameo" style="margin-top: 1.5em;margin-bottom: 1.5em;" />
 
 Initially, [Frameo](https://www.frameo.com/) seemed like a good idea—sending photos directly from an iPhone app to the frame. But in reality, it wasn't very good. First, the Frameo iOS app took up a lot of space, sometimes more than 4GB on my phone, which is too much for just sending photos.
 
