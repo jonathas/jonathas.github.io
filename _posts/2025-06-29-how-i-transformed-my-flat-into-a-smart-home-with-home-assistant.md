@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How I Transformed My Flat into a Smart Home with Home Assistant"
-excerpt: "A deep dive into my Home Assistant Yellow setup featuring Zigbee mesh networking, local-only device control, and advanced automations for a fully integrated smart home."
+excerpt: "A deep dive into my Home Assistant Yellow build using Zigbee mesh, local-only device control, and advanced automation logic."
 date: 2025-06-29T16:30:00+02:00
 categories: home-automation home-assistant zigbee
 tags: [home assistant, smart home, zigbee, automation, apple homekit, nfc, alarmo, home assistant yellow]
