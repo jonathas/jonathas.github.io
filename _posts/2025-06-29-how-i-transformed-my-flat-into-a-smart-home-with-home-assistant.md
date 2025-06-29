@@ -3,7 +3,6 @@ layout: post
 title: "How I Transformed My Flat into a Smart Home with Home Assistant"
 excerpt: "A deep dive into my Home Assistant Yellow build using Zigbee mesh, local-only device control, and advanced automation logic."
 date: 2025-06-29T16:30:00+02:00
-categories: home-automation home-assistant zigbee
 tags: [home assistant, smart home, zigbee, automation, apple homekit, nfc, alarmo, home assistant yellow]
 image:
   feature: posts/home-assistant/cover-smart-home.jpg
@@ -20,7 +19,7 @@ Today, my entire flat runs on [Home Assistant Yellow](https://www.home-assistant
 
 ## Why Home Assistant?
 
-The biggest draw was flexibility and local control. Unlike Alexa or Google Home, Home Assistant doesn't depend on the cloud to work. That means no delays, no vendor lock-in, and no worries if the Internet goes down. Nearly all my devices now run on Zigbee, connecting directly to the Home Assistant Yellow hub. This drastically reduced latency and increased reliability.
+The biggest draw was flexibility and local control. Unlike Alexa or Google Home, Home Assistant doesn't depend on the cloud to work. That means no delays, no vendor lock-in, and no worries if the internet goes down. Nearly all my devices now run on Zigbee, connecting directly to the Home Assistant Yellow hub. This drastically reduced latency and increased reliability.
 
 <img src="/images/posts/home-assistant/zigbee-network.png" alt="Zigbee Network" title="Zigbee Network" style="margin-top: 1.5em;margin-bottom: 1.5em;" />
 
