@@ -3,6 +3,7 @@ layout: post
 title: "How I Transformed My Flat into a Smart Home with Home Assistant"
 excerpt: "A deep dive into my Home Assistant Yellow setup, combining Zigbee mesh, local automation, and Apple ecosystem integration."
 date: 2025-06-29T16:30:00+02:00
+comments: true
 tags: [home assistant, smart home, zigbee, automation, apple homekit, nfc, alarmo, home assistant yellow]
 image:
   feature: posts/home-assistant/cover-smart-home.jpg
