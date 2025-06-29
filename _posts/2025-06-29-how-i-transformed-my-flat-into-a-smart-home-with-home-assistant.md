@@ -16,7 +16,7 @@ When I first ventured into home automation, like many, I started with Alexa. Voi
 
 Today, my entire flat runs on [Home Assistant Yellow](https://www.home-assistant.io/yellow/), which comes with a built-in Zigbee radio and is built specifically for local-first automation. It was a game-changer. I went from juggling multiple ecosystems to a cohesive, responsive, and private smart home that works exactly the way I want.
 
-![Home Assistant Yellow](/images/posts/home-assistant/home-assistant-yellow.jpg "Home Assistant Yellow")
+<img src="/images/posts/home-assistant/home-assistant-yellow.jpg" alt="Home Assistant Yellow" title="Home Assistant Yellow" style="margin-top: 1.5em;margin-bottom: 1.5em;" />
 
 ## Why Home Assistant?
 
