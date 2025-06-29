@@ -22,7 +22,7 @@ Today, my entire flat runs on [Home Assistant Yellow](https://www.home-assistant
 
 The biggest draw was flexibility and local control. Unlike Alexa or Google Home, Home Assistant doesn't depend on the cloud to work. That means no delays, no vendor lock-in, and no worries if the Internet goes down. Nearly all my devices now run on Zigbee, connecting directly to the Home Assistant Yellow hub. This drastically reduced latency and increased reliability.
 
-![Zigbee Network](/images/posts/home-assistant/zigbee-network.png "Zigbee Network")
+<img src="/images/posts/home-assistant/zigbee-network.png" alt="Zigbee Network" title="Zigbee Network" style="margin-top: 1.5em;margin-bottom: 1.5em;" />
 
 My choice of Zigbee over Wi-Fi wasn’t just about responsiveness—it was also practical. In a modern flat with multiple smart devices, phones, laptops, TVs, and work equipment all sharing the same Wi-Fi network, congestion becomes inevitable. Zigbee devices operate on a separate mesh network that’s purpose-built for low-power, low-bandwidth communication. This means they don’t compete for bandwidth with streaming video, Zoom calls, or backups. It also makes the entire system more scalable and robust.
 
@@ -30,7 +30,7 @@ Take my early experience with TP-Link TAPO smart sockets. While they were afford
 
 ## Built via the UI (No YAML Required)
 
-![Home Assistant UI](/images/posts/home-assistant/ha_ss_1.png "Home Assistant UI")
+<img src="/images/posts/home-assistant/ha_ss_1.png" alt="Home Assistant UI" title="Home Assistant UI" style="margin-top: 1.5em;margin-bottom: 1.5em;" />
 
 Although Home Assistant gives you full access to YAML configuration, I opted for a UI-first approach. The modern Home Assistant dashboard and automation editor are incredibly powerful—I was able to build nearly everything through the web interface without manually editing YAML files. This made the process smoother, safer, and more approachable. You can still find my configuration and structure documented [on GitHub](https://github.com/jonathas/homeassistant-config), but most of the logic was built visually.
 
@@ -41,33 +41,33 @@ Here’s where the system really shines: automation. I’ve built dozens of smal
 - **You’ve Got Mail**: When the mailbox sensor is triggered, Home Assistant sends a notification to my phone so I know mail has arrived—even before I open the door.
 - **Smoke Alert**: I have three Zigbee-powered smoke sensors—one in the hallway, one in the living room, and another in the office. If any of them detect smoke, Home Assistant instantly notifies me.
 
-![Push notifications](/images/posts/home-assistant/push-notifications.png "Push notifications")
+<img src="/images/posts/home-assistant/push-notifications.png" alt="Push notifications" title="Push notifications" style="margin-top: 1.5em;margin-bottom: 1.5em;" />
 
 - **Low Battery Warnings**: All sensors are monitored for battery status, and when one falls below a certain threshold, I get notified—no more dead devices without warning.
 - **Shutter Control**: My shutters automatically close after sunset and open at sunrise, using sun elevation as the trigger.
 - **Gym Prep Mode**: When my Withings sleep tracking detects I’ve woken up, a webhook triggers Home Assistant to turn on the lights and get me ready for the gym—before I even touch anything.
 - **Kitchen LED Strip**: A battery-powered Zigbee switch controls a sleek LED strip mounted under the kitchen counter.
 
-![LED strip](/images/posts/home-assistant/led-strip.jpg "LED strip")
+<img src="/images/posts/home-assistant/led-strip.jpg" alt="LED strip" title="LED strip" style="margin-top: 1.5em;margin-bottom: 1.5em;" />
 
 - **Smart Sockets and Switches**: Other battery-powered switches control lights through Zigbee-connected smart sockets.
 - **Bathroom Fan Logic**: If the bathroom door is closed and the light is on, the fan activates automatically.
 - **Humidity Control**: A dehumidifier switches on when the indoor humidity passes a predefined level.
 - **Alarm System via Alarmo**: I’ve integrated a smart siren using the Alarmo custom integration, which is connected to door and window sensors. If the system is armed and a breach is detected, the siren triggers and notifications are sent immediately.
 
-![Alarmo](/images/posts/home-assistant/alarmo.png "Alarmo")
+<img src="/images/posts/home-assistant/alarmo.png" alt="Alarmo" title="Alarmo" style="margin-top: 1.5em;margin-bottom: 1.5em;" />
 
 ## Seamless Integration with Apple Ecosystem
 
 One feature that elevates the experience is the **HomeKit Bridge** integration. Through this, I’ve exposed all my Home Assistant devices to Apple’s Home app. My HomePods can now see and control every switch, light, sensor, and more. It feels native—“Hey Siri, turn off all the lights in the flat” just works—even for Zigbee devices that have no official Apple support. No subscriptions, no iCloud Home Hub required.
 
-![Apple Home](/images/posts/home-assistant/apple-home.png "Apple Home")
+<img src="/images/posts/home-assistant/apple-home.png" alt="Apple Home" title="Apple Home" style="margin-top: 1.5em;margin-bottom: 1.5em;" />
 
 ## Smarter Lighting, Simpler Bulbs
 
 Instead of relying on smart bulbs—which can be expensive and often require constant power—I opted for Zigbee-enabled wall switches. This approach allows me to use standard light bulbs throughout the flat while maintaining complete control via Home Assistant. The lights behave like any normal wall-controlled circuit, but are also fully accessible for automation, scheduling, and remote control. It keeps things simple for guests and family members while preserving smart functionality in the background.
 
-![Wall sockets](/images/posts/home-assistant/wall-sockets.jpg "Wall sockets")
+<img src="/images/posts/home-assistant/wall-sockets.jpg" alt="Wall sockets" title="Wall sockets" style="margin-top: 1.5em;margin-bottom: 1.5em;" />
 
 ## NFC Tags and Touch-Based Automation
 
@@ -91,7 +91,7 @@ Even though these devices connect via Wi-Fi, the Miio integration communicates w
 
 ## Shutter Integration with Somfy TaHoma Switch
 
-![Tahoma Switch](/images/posts/home-assistant/tahoma-switch.jpgg "Tahoma Switch")
+<img src="/images/posts/home-assistant/tahoma-switch.jpg" alt="Tahoma Switch" title="Tahoma Switch" style="margin-top: 1.5em;margin-bottom: 1.5em;" />
 
 My shutters weren’t Zigbee-compatible out of the box—they required a **TaHoma Switch**, which acts as a bridge between the proprietary shutter protocol and Home Assistant. Once configured, the TaHoma Switch exposed each shutter as an entity in Home Assistant, allowing me to control them through automations or directly from the dashboard. And because I’ve integrated Home Assistant with the HomeKit Bridge, these shutter controls are also available via Siri on my HomePods. Voice commands like “Hey Siri, set the office shutter to 50%” are now fully supported.
 
