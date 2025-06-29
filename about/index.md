@@ -35,4 +35,4 @@ You can find below how to contact me:
 * You can [email me here](mailto:contact@jonathas.com)
 * [LinkedIn](https://linkedin.com/in/jonathasribeiro)
 * [Github](https://github.com/jonathas)
-* [Twitter](https://twitter.com/jonathasrr)
+* [Bluesky](https://bsky.app/profile/jonathas.com)
