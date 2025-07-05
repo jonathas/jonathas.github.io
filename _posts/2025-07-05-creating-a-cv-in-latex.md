@@ -11,9 +11,9 @@ image:
   creditlink: https://pngtree.com/free-backgrounds
 ---
 
-For years, I maintained my CV using various online builders. They got the job done, but there was always a subscription fee. This last time I tried to update my CV through one of them, their payment process got stuck. They withdrew the subscription fee from my card but didn't enable any premium features. That was the last nail on the coffin for me.
+For years, I maintained my CV using various online builders. They got the job done, but there was always a subscription fee. This last time I tried to update my CV through one of them, their payment process got stuck. They withdrew the subscription fee from my card but didn't enable any premium features. That was the last nail in the coffin for me.
 
-This year, I decided to rebuild my CV from scratch using **LaTeX**. The result is clean, easy to maintain, and version-controlled.
+This year, I decided to rebuild my CV from scratch using **LaTeX**. The result is a clean, professional-looking CV that’s easy to maintain and version-controlled with Git.
 
 ## Why LaTeX?
 
@@ -91,6 +91,8 @@ Everything fits into **two pages**, and updates are now fast and consistent. I n
 - 📄 [Download the PDF](https://github.com/jonathas/cv/blob/master/CV_Jonathas_Ribeiro.pdf)
 
 ## Final Thoughts
+
+<img src="/images/posts/cv-in-latex/cv-preview.png" alt="CV Preview" title="CV Preview" style="margin-top: 1.5em;margin-bottom: 1.5em;" />
 
 LaTeX isn’t the quickest way to build a CV, but it’s one of the most reliable and rewarding. It’s a great fit for developers, researchers, or anyone who wants full control over how their work is presented.
 
