@@ -87,8 +87,8 @@ Everything fits into **two pages**, and updates are now fast and consistent. I n
 
 ## Links
 
-- 📂 [CV GitHub Repository](https://github.com/jonathas/your-cv-repo)  
-- 📄 [Download the PDF](https://jonathas.com/files/Jonathas_Ribeiro_CV.pdf)
+- 📂 [CV GitHub Repository](https://github.com/jonathas/cv)  
+- 📄 [Download the PDF](https://github.com/jonathas/cv/blob/master/CV_Jonathas_Ribeiro.pdf)
 
 ## Final Thoughts
 
