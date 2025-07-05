@@ -2,7 +2,7 @@
 layout: post
 title: "Creating a CV in LaTeX: Clean, Structured, and Versioned"
 excerpt: How I built a modern, professional CV in LaTeX and shared it on GitHub for easy versioning and reuse.
-date: 2025-06-28T12:02:00+02:00
+date: 2025-07-05T12:02:00+02:00
 comments: true
 tags: [latex, cv, productivity, open-source]
 image:
