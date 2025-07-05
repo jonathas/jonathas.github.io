@@ -6,7 +6,7 @@ date: 2025-07-05T12:02:00+02:00
 comments: true
 tags: [latex, cv, productivity, open-source]
 image:
-  feature: posts/cv-in-latex/cv-in-latex.jpg
+  feature: posts/cv-in-latex/cover-latex.jpg
   credit: PngTree
   creditlink: https://pngtree.com/free-backgrounds
 ---
