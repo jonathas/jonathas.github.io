@@ -89,14 +89,16 @@ Instead of routing uploads through your backend, you can **let clients upload di
 3. The client uploads the file directly to S3 using `multipart/form-data`.
 
 <div class="mermaid">
-flowchart LR
-  Client["Client (Browser/App)"]
-  App["App Server (Policy Generator)"]
-  S3["S3 Bucket"]
+sequenceDiagram
+  autonumber
+  participant Client as Client (Browser/App)
+  participant API as App Server
+  participant S3 as S3 Bucket
 
-  Client --> App
-  App --> Client
-  Client --> S3
+  Client->>API: GET /attachments/presigned-post-policy
+  API-->>Client: 200 OK (URL + fields)
+  Client->>S3: POST file upload (multipart/form-data)
+  S3-->>Client: 204 No Content
 </div>
 
 ## Benefits of Presigned Uploads
