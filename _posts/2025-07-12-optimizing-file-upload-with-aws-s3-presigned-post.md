@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Optimize File Upload Architecture with AWS S3 Presigned POST"
+title: "Optimizing File Upload Architecture with AWS S3 Presigned POST"
 excerpt: Reduce infrastructure strain by cutting the backend out of the upload path.
 date: 2025-07-12T16:00:10+02:00
 comments: true
@@ -54,7 +54,7 @@ flowchart LR
 - App still receives and processes the full payload.
 - Memory and CPU are wasted just to forward the upload.
 
-### 🔸 Architecture 2: Upload via API Gateway + Load Balancer (No NGINX)
+### 🔸 Architecture 2: Upload via API Gateway + Load Balancer
 
 This setup is common in cloud-native apps using AWS infrastructure.
 
@@ -107,25 +107,70 @@ flowchart LR
 - 💡 **Avoid Limits**: Works around API Gateway’s 10MB payload cap.
 - 🔐 **Secure**: You control what, where, and for how long uploads are allowed.
 
-## Example Client Implementation (JavaScript)
+## Example Server-Side implementation
+
+```typescript
+import { Injectable } from '@nestjs/common';
+import { createPresignedPost } from '@aws-sdk/s3-presigned-post';
+
+@Injectable()
+export class S3Service {
+
+  public getPresignedPostPolicy(
+    filename: string,
+    bucketConfig: S3BucketResourceConfig,
+    contentType?: string
+  ): Promise<{ url: string; fields: Record<string, string> }> {
+    const expiresInSeconds = 600; // Default 10 minutes
+    const maxSizeBytes = 150 * 1024 * 1024; // Default 150 MB
+
+    const s3ClientConfig: S3ClientConfig = {
+      region: bucketConfig.region
+    };
+
+    return createPresignedPost(new S3Client(s3ClientConfig), {
+      Bucket: bucketConfig.name,
+      Key: filename,
+      Conditions: [
+        ['content-length-range', 0, maxSizeBytes],
+        ['starts-with', '$Content-Type', contentType || '']
+      ],
+      Fields: {
+        ...(contentType && { 'Content-Type': contentType })
+      },
+      Expires: expiresInSeconds
+    });
+  }
+
+}
+```
+
+## Example Client Implementations
 
 Here’s how a client might perform the upload:
 
-```js
-async function uploadFile(file) {
-  // Step 1: Get the presigned policy
-  const res = await fetch('/api/get-presigned-policy?filename=' + file.name);
-  const { url, fields } = await res.json();
+```typescript
+import axios from 'axios';
 
-  // Step 2: Prepare the upload
+async function uploadFile(file: File) {
+  // Step 1: Get the presigned policy
+  const res = await axios.get('/api/get-presigned-policy', {
+    params: {
+      filename: file.name,
+      contentType: file.type,
+    },
+  });
+
+  const { url, fields } = res.data;
+
+  // Step 2: Prepare the upload form
   const formData = new FormData();
-  Object.entries(fields).forEach(([key, val]) => formData.append(key, val));
+  Object.entries(fields).forEach(([key, val]) => formData.append(key, val as string));
   formData.append('file', file); // must be last
 
   // Step 3: Upload to S3
-  const uploadRes = await fetch(url, {
-    method: 'POST',
-    body: formData
+  const uploadRes = await axios.post(url, formData, {
+    headers: { 'Content-Type': 'multipart/form-data' },
   });
 
   if (uploadRes.status === 204) {
@@ -153,4 +198,10 @@ Presigned POST policies in AWS S3 offer a better approach:
 - Secure and time-limited.
 - Scalable and resilient.
 
-Offload uploads to where they belong — your storage layer — and keep your app fast, lean, and maintainable.
+Offload uploads to your storage layer, which is where they belong, and keep your app fast, simple, and maintainable.
+
+## More info about the AWS feature
+
+- [Browser-Based Uploads Using POST (AWS Signature Version 4](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-UsingHTTPPOST.html)
+- [POST Policy - Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-HTTPPOSTConstructPolicy.html)
+- [Example: Browser-Based Upload using HTTP POST (Using AWS Signature Version 4)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-post-example.html)
