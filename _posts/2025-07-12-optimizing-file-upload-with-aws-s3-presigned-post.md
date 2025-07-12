@@ -148,7 +148,7 @@ export class S3Service {
 }
 ```
 
-## Example Client Implementations
+## Example Client Implementation
 
 Here’s how a client might perform the upload:
 
