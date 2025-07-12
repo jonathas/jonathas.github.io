@@ -36,7 +36,7 @@ Let’s look at two common architectures where these problems show up.
 
 This is typical in smaller-scale deployments with a single server behind a reverse proxy.
 
-```mermaid
+<div class="mermaid">
 flowchart LR
   Client["Client (Browser/App)"]
   NGINX["NGINX (Reverse Proxy)"]
@@ -46,7 +46,7 @@ flowchart LR
   Client --> NGINX
   NGINX --> App
   App --> S3
-```
+</div>
 
 **Problems:**
 
@@ -58,7 +58,7 @@ flowchart LR
 
 This setup is common in cloud-native apps using AWS infrastructure.
 
-```mermaid
+<div class="mermaid">
 flowchart LR
   Client["Client (Browser/App)"]
   APIGW["AWS API Gateway"]
@@ -70,7 +70,7 @@ flowchart LR
   APIGW --> ALB
   ALB --> App
   App --> S3
-```
+</div>
 
 **Problems:**
 
@@ -88,7 +88,7 @@ Instead of routing uploads through your backend, you can **let clients upload di
 2. Your backend returns a temporary URL and form fields.
 3. The client uploads the file directly to S3 using `multipart/form-data`.
 
-```mermaid
+<div class="mermaid">
 flowchart LR
   Client["Client (Browser/App)"]
   App["App Server (Policy Generator)"]
@@ -97,7 +97,7 @@ flowchart LR
   Client --> App
   App --> Client
   Client --> S3
-```
+</div>
 
 ## Benefits of Presigned Uploads
 
