@@ -39,18 +39,18 @@ This is typical in smaller-scale deployments with a single server behind a rever
 <div class="mermaid">
 flowchart LR
   Client["Client (Browser/App)"]
-  NGINX["NGINX (Reverse Proxy)"]
+  Nginx["Nginx (Reverse Proxy)"]
   App["App Server"]
   S3["S3 Bucket"]
 
-  Client --> NGINX
-  NGINX --> App
+  Client --> Nginx
+  Nginx --> App
   App --> S3
 </div>
 
 **Problems:**
 
-- NGINX must **buffer** the file in memory or disk (an exception can be thrown here).
+- Nginx must **buffer** the file in memory or disk (an exception can be thrown here).
 - App still receives and processes the full payload.
 - Memory and CPU are wasted just to forward the upload.
 
@@ -101,7 +101,7 @@ flowchart LR
 
 ## Benefits of Presigned Uploads
 
-- 🚀 **Bypass Infrastructure**: No more file handling by NGINX, ALB, or API Gateway.
+- 🚀 **Bypass Infrastructure**: No more file handling by Nginx, ALB, or API Gateway.
 - 📉 **Reduce Server Load**: No memory or CPU usage from streaming file data.
 - ⏱️ **Improve Latency**: Fewer hops and no buffering.
 - 💡 **Avoid Limits**: Works around API Gateway’s 10MB payload cap.
