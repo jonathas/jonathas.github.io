@@ -18,7 +18,7 @@ Throughout my career, I have worked on several software projects for (mostly) st
 
 Beyond my professional work, I’m passionate about self-hosting and home automation. I run several services on a Raspberry Pi and Home Assistant on a Home Assistant Yellow device, integrated with several devices to create a smarter, more efficient home.
 
-I’ve been using Linux since 2006 and have a special love for Arch Linux and Debian. In my free time, you’ll find me tinkering with home automation, taking photos, playing video games, watching series, lifting heavy stuffa at the gym, or traveling.
+I’ve been using Linux since 2006 and have a special love for Arch Linux and Debian. In my free time, you’ll find me tinkering with home automation, taking photos, playing video games, watching series, lifting heavy stuff at the gym, or traveling.
 
 Thanks for visiting my website, and I hope you enjoy exploring the content here!
 
