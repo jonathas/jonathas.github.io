@@ -350,9 +350,6 @@ When a letter arrives:
 ![Mailbox notification on phone](/images/posts/mailbox-smart-home/mailbox-notification.png)
 <div style="height: 16px;"></div>
 
-This transforms a physical mailbox into an event-driven system.
-The mailbox becomes part of your software architecture.
-
 This small project turned an ordinary mailbox into an event-driven system, proving that software architecture does not have to stop at the boundaries of a server.
 
 ---
