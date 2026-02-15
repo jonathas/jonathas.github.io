@@ -5,6 +5,9 @@ _site
 *.sublime-workspace
 codekit-config.json
 node_modules
+.bundle/
+vendor/
+vendor/bundle/
 _asset_bundler_cache
 /nbproject/private/
 /nbproject/

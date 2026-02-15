@@ -13,6 +13,12 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
+  quiet_deps: true
+  silence_deprecations:
+    - import
+    - global-builtin
+    - color-functions
+    - slash-div
 gems:
   - jekyll-sitemap
 
