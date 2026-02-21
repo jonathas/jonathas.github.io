@@ -1,5 +1,32 @@
 # My website using Jekyll with the theme Minimal Mistakes on GitHub pages
 
+## Run locally
+
+Prerequisites:
+
+- Ruby `3.3.6` (see `.ruby-version`)
+- Bundler (`gem install bundler`)
+
+Install dependencies:
+
+```bash
+bundle install
+```
+
+Start the local server:
+
+```bash
+bundle exec jekyll serve
+```
+
+Then open `http://127.0.0.1:4000` in your browser.
+
+If you want draft posts enabled:
+
+```bash
+bundle exec jekyll serve --drafts
+```
+
 # Minimal Mistakes
 
 **[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes)** is a two column responsive Jekyll theme perfect for powering your GitHub hosted blog. 
