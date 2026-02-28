@@ -175,7 +175,7 @@ action:
         data:
           title: Main Bedroom Dehumidifier Tank Full
           message: >-
-            The main bedroom dehumidifier reported a fault (code: {{ state_attr('sensor.xiaomi_lite_814e_device_fault', 'dehumidifier.fault') }}).
+            The main bedroom dehumidifier reported a fault (code: {% raw %}{{ state_attr('sensor.xiaomi_lite_814e_device_fault', 'dehumidifier.fault') }}{% endraw %}).
             This is usually a full tank. Please check and empty it.
 mode: single
 ```
