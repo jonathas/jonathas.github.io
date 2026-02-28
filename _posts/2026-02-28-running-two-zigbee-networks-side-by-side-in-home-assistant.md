@@ -210,6 +210,11 @@ Everything already stable in ZHA stays untouched.
 
 ## Real-world example: Tuya TS0041 button
 
+<div style="height: 16px;"></div>
+![Tuya TS0041 button](/images/posts/zigbee-hybrid/button.jpg)
+<div style="height: 16px;"></div>
+
+
 This button was the main reason I introduced Zigbee2MQTT.
 
 In my setup:
