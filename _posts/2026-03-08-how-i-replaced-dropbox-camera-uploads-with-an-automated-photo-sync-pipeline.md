@@ -5,19 +5,22 @@ excerpt: How I rebuilt the best part of Dropbox Camera Uploads with Apple Photos
 date: 2026-03-08T17:39:19+01:00
 comments: true
 tags: [apple-photos, photo-backup, automation, adb, fotoo, osxphotos, rsync, digital-photo-frame, filesystem, macos]
+image:
+  feature: posts/photo-sync-pipeline/photo-sync-pipeline-cover.png
 ---
 
-I've always liked to have my photos and videos organized in proper directories instead of leaving everything in a messy state, with duplicates and many very similar photos and videos just occupying space. In order to keep my file list clean, I run a photo workflow process on a weekly basis (so they don't accumulate over time), where I move the files to the correct directories and back them up. I also want to have full control of my files, which means I want to have them in my hard-drive so I can export them to external drives instead of only keeping them in iCloud.
+I run a weekly photo cleanup routine because I want two things at the same time:
 
-For a long time, my photo workflow was technically working, but it was wasting too much of my time.
+- Only curated photos in iCloud  
+- Real files on disk for archive and backup
 
-For years, one important part of that workflow was handled by Dropbox Camera Uploads.
+I like having my photos as normal files. I can inspect them, back them up to external drives, and know exactly where they live instead of relying entirely on a cloud service.
 
-That feature solved a very practical problem really well:
+For years, Dropbox Camera Uploads handled an important part of this workflow: photos arriving on my MacBook as normal files.
 
-> It gave me automatic, local-first access to my camera photos as normal files.
+I use Apple Photos for curation, not as my archive, so that behavior mattered a lot.
 
-However, I've started thinking about maybe replacing Dropbox with another service, like for example Proton Drive. Unfortunately, Proton Drive doesn't have a Camera Uploads feature and the photos it syncs are not available as files in your hard-drive.
+When I started considering alternatives to Dropbox (for example Proton Drive), the gap became obvious. Sync exists, but getting **camera photos automatically as files on disk** is not guaranteed.
 
 Once Dropbox Camera Uploads stopped being the center of my workflow, I had to rebuild that behavior myself.
 
@@ -25,208 +28,164 @@ Once Dropbox Camera Uploads stopped being the center of my workflow, I had to re
 
 ## Before
 
-Every week I had to do the same sequence again:
+My weekly flow looked like this:
 
-- Wait for Dropbox Camera Uploads to sync photos and videos from my iPhone to my MacBook
-- Check for duplicates and clean them up
-- Run the [pbc-organizer](https://github.com/jonathas/pbc-organizer) script I created to rename and move the files into directories separated by date, according to their exif info.
-- Move files into the right folders for backup
-- Choose a few good photos for my Digital frame
-- Convert and resize these selected images since I don't need huge files in a Digital frame.
-- Transfer them to the Digital frame/Android tablet with [LocalSend](https://localsend.org/)
-- Run backups to external drives using custom rsync scripts
+1. Let Dropbox Camera Uploads sync iPhone photos and videos to my MacBook.
+2. Check duplicates and curate what I wanted to keep in iCloud.
+3. Run the [pbc-organizer](https://github.com/jonathas/pbc-organizer) script I implemented to rename and move files by EXIF date.
+4. Move files into backup folders.
+5. Choose photos for my digital frame.
+6. Resize and convert them.
+7. Send them to the digital frame/tablet using [LocalSend](https://localsend.org/).
+8. Run backup scripts to external drives.
 
-None of these tasks were individually difficult, but too many small manual steps meant too many chances to forget something, postpone it, or leave the whole process half-finished.
+This workflow worked, but it was repetitive and fragile. The curation decisions were valuable. The glue work was not.
 
-This became even more obvious after I [replaced my old Frameo digital frame with an Android tablet running Fotoo](https://jonathas.com/how-i-replaced-my-frameo-digital-frame-with-an-android-tablet/).
-
-That change gave me a better display device and faster system, but it did not solve the larger problem:
-
-> My photos were still trapped inside a mostly manual workflow.
-
-Dropbox Camera Uploads had set a very high baseline for me.
-
-It was not sophisticated, but it did one thing extremely well:
-
-- Camera photos appeared as files
-- The files were easy to inspect
-- The files were easy to back up
-- The filesystem stayed central
-
-Once I no longer wanted to depend on Dropbox anymore for that, I discovered that replacing this behavior was not trivial.
-
-This newer workflow had a few annoying properties:
-
-- Apple Photos was already useful for weekly curation, but it did not give me the same filesystem-level result as Dropbox Camera Uploads
-- The digital frame wanted plain JPEG files in a normal folder
-- LocalSend still required a manual transfer step every time I wanted to update the tablet
-- Backups wanted deterministic paths and filenames
-- Other cloud storage services did not automatically replace the Dropbox Camera Uploads workflow. Proton Drive's photos feature doesn't sync the real files to your MacBook.
-- My time was being spent on glue work between tools instead of on actual curation
-
-The curation part is valuable, while glue work is not.
-
-## What I wanted instead
-
-I was already using Apple Photos for the part it is actually good at:
-
-- Capturing and syncing from devices
-- Browsing photos quickly
-- Deleting duplicates
-- Selecting favorites
-
-My weekly routine was already based on curating photos there:
-
-- Remove the photos I do not want to keep
-- Leave only the selected ones in iCloud and the rest on my physical backups (Dropbox + Macbook hard-drive + external hard-drives)
-
-The idea was:
-
-> I am already paying for iCloud, and Apple Photos already handles the syncing part well enough, so I can leverage that and rebuild the filesystem part around it.
-
-In other words, I wanted back the useful part of Dropbox Camera Uploads:
-
-- Photos arriving on my MacBook through sync
-- Photos available as normal files on disk
-
-Without depending on Dropbox to do it.
-
-This also makes the setup more resilient if I change cloud providers again.
-
-So instead of looking for one big replacement product, I built a small pipeline around the tools that already do each part well.
-
-The core pieces are:
-
-- `osxphotos` to export files from Apple Photos
-- `sips` to resize and convert images on macOS
-- ADB to push photos to the Android tablet over Wi-Fi
-- `rsync` to copy the archive to external drives
+After I [replaced my old Frameo digital frame with an Android tablet running Fotoo](https://jonathas.com/how-i-replaced-my-frameo-digital-frame-with-an-android-tablet/), the display and system improved, but the workflow was still mostly manual.
 
 ---
 
-## The part I automated
+## What I wanted instead
 
-The result is a small project I called [photo-sync-pipeline](https://github.com/jonathas/photo-sync-pipeline).
+I did not want to replace Apple Photos. I already use it weekly to curate photos:
 
-It automates the repetitive parts of my workflow while keeping the human decisions manual.
+- I remove what I do not want, like very similar photos
+- Keep selected photos in iCloud
+- Use albums to signal intent
 
-I still manually decide:
+The idea was simple:
 
-- Which duplicates to delete
-- Which photos are worth keeping
-- Which photos should go to the Digital frame
+> Apple Photos can handle syncing and curation, while automation handles exporting and filesystem organization.
 
-But once those decisions are made, the rest can be scripted.
+So I built a small pipeline to restore the capability I cared about from Dropbox Camera Uploads:
 
-The pipeline now does this for me:
+- Photos arriving through sync
+- Photos available as normal files on disk
+- Deterministic backups
 
-- Export photos and videos from Apple Photos since a given date
-- Place them into predictable directories on disk
-- Export the curated "Digital frame" album
+Core tools:
+
+- `osxphotos` for exporting from Apple Photos
+- `sips` for image conversion and resizing
+- ADB over Wi-Fi for tablet transfer
+- `rsync` for backups
+
+---
+
+## The automated pipeline
+
+You can find the scripts in the [photo-sync-pipeline repository](https://github.com/jonathas/photo-sync-pipeline).
+
+I still manually decide what to delete, keep, and send to the digital frame. After that, scripts handle the mechanical steps.
+
+The pipeline now does the following:
+
+- Export photos and videos since a given date
+- Place them into predictable directories
+- Export the curated `Digital frame` album
 - Normalize file extensions
-- Convert HEIC files to JPG
-- Resize and compress images for the tablet
-- Push them to the Android device over ADB via Wi-Fi
+- Convert HEIC to JPG
+- Resize and compress frame photos
+- Push them to Android via ADB
 - Trigger a media scan
 - Restart Fotoo
-- Clear the Digital frame album after the transfer
-- Run backups to external drives
+- Clear the `Digital frame` album
+- Run backup sync jobs
 
-## What the weekly flow looks like now
-
-I still keep one lightweight weekly routine:
-
-1. Open Photos and remove obvious duplicates.
-2. Wait until iCloud sync is complete.
-3. Export new photos since the last run.
-4. Select the photos I want on the digital frame by adding them to the `Digital frame` album.
-5. Connect the backup drives.
-6. Run the export command for the digital frame.
-
-In practice, the two commands I care about are:
+Typical commands:
 
 ```bash
 export-photos-since 2026-01-25
 export-digital-frame
 ```
 
-The first command exports recent photos from Apple Photos into my archive folders.
-
-Conceptually, that command is my replacement for Dropbox Camera Uploads.
-
-It turns "photos inside Apple Photos" back into "photos as files on disk".
-
-The second command handles the device-specific work:
-
-- Export the album
-- Resize and compress images
-- Convert HEIC to JPG
-- Send files to the tablet
-- Refresh the media database
-- Restart Fotoo
-- Clear the Photos album
-- Run the backup scripts
-
-That removed most of the boring operational work from the process.
+`export-photos-since` effectively replaces the "files on disk" behavior of Dropbox Camera Uploads.
 
 ---
 
-## Why this saves me time
+## Small pipeline diagram
 
-The biggest improvement is not that the commands are fast.
+This is the operational flow I usually follow each week:
 
-The biggest improvement is that they reduce mental overhead.
+<div class="mermaid">
+flowchart TD
+    A[Open Apple Photos] --> B[Delete duplicates and curate]
+    B --> C[Wait for iCloud sync]
+    C --> D[Run export-photos-since]
+    D --> E[Add selected photos to Digital frame album]
+    E --> F[Run export-digital-frame]
+    F --> G[Tablet updated]
+    F --> H[Backups synced]
+</div>
 
-Before, I had to remember the exact sequence and mentally verify each step:
-
-- Did I export the right date range?
-- Did I convert the HEIC files?
-- Did I transfer the resized versions or the originals?
-- Did I run backups afterward?
-
-Now the process is encoded once in scripts instead of being re-created from memory every week.
-
-This is the kind of automation I like most: Not flashy, just removing repeated friction from a process I already know I will keep doing.
-
----
-
-## The digital frame became part of the pipeline
-
-This also completed the setup I started when I moved away from Frameo.
-
-In my earlier post about the Android tablet, I described the device change itself.
-
-This pipeline is what made that setup truly practical long-term.
-
-At first I was transferring the selected photos from my MacBook to the tablet with LocalSend, which was already much better than using Frameo. But once I wanted a repeatable weekly process, manual transfer was still too much friction.
-
-So LocalSend was good as a transition step, while ADB over Wi-Fi turned it into a proper automation.
-
-Instead of manually preparing a batch of photos and transferring them each time, the "Digital frame" album in Apple Photos now acts as a signal:
-
-> These are the photos I want on the frame next.
-
-Once the pipeline consumes that album, it exports the files, sends them to the tablet, refreshes Fotoo, and clears the album again.
-
-So the album is not storage, but intent.
-
-That small shift made the whole workflow much cleaner.
+It is still a curated workflow, not a fully automatic one. That is intentional, since I want the decisions to stay manual and the repetitive steps to be scripted.
 
 ---
 
-## Final thoughts
+## Example exported filesystem structure
 
-I did not build this because I wanted an elaborate photo management system, but because I was tired of doing the same boring photo chores over and over again.
+One of the main goals was to keep the exported files easy to inspect and back up. A simplified structure looks like this:
 
-The final result is intentionally simple:
+```text
+2026/
+├── 01 - January                           
+│   ├── 2026-01-01                                                                          
+│   │   ├── 2026-01-01 09.29.20.heic       
+│   │   ├── 2026-01-01 09.29.23.heic                                                        
+│   │   ├── 2026-01-01 09.29.24.heic       
+│   │   ├── 2026-01-01 09.35.04.heic                                                        
+│   │   ├── 2026-01-01 09.35.07.heic      
+│   │   ├── 2026-01-01 09.35.38.heic      
+│   │   └── 2026-01-01 18.32.27.heic      
+│   ├── 2026-01-02                        
+│   │   ├── 2026-01-02 18.26.47.mov 
+│   │   └── 2026-01-02 18.26.51.jpg        
+│   ├── 2026-01-03                  
+│   │   ├── 2026-01-03 09.32.47.heic       
+│   │   ├── 2026-01-03 09.32.48.heic       
+│   │   ├── 2026-01-03 09.32.52.heic       
+│   │   ├── 2026-01-03 09.32.54.heic       
+│   │   ├── 2026-01-03 09.32.55.heic       
+│   │   ├── 2026-01-03 09.32.59.heic       
+│   │   ├── 2026-01-03 10.46.40.heic       
+│   │   ├── 2026-01-03 10.46.42.heic
+...
+```
 
-- Apple Photos for capture and curation
-- exported files as the archive
-- ADB for the tablet
-- rsync for backups
+The exact layout can vary, but the important parts are:
 
-No single tool owns the whole process.
+- Deterministic paths
+- Files visible in normal directories
+- A separate place for digital frame exports
+- Backup destinations that can be synced repeatedly
 
-That is exactly why it works better for me.
+---
 
-If you also use Apple Photos but want your files, backups, and digital frame updates to behave like normal, inspectable Unix-style workflows, building a small pipeline around them is absolutely worth it.
+## Why this is better
+
+The main improvement is reduced mental overhead.
+
+Before, I had to remember a long sequence of manual steps every week.
+
+LocalSend was a good intermediate step for transferring photos to the tablet, but ADB made the process fully repeatable.
+
+Now the `Digital frame` album acts as a signal, not storage:
+
+- Add photos to the album
+- Run the pipeline
+- The batch is exported, transferred, and cleared
+
+---
+
+## Final setup
+
+The system now looks like this:
+
+- Apple Photos + iCloud for sync and curation
+- Filesystem directories as the archive
+- ADB for transferring images to the digital frame
+- `rsync` for backups
+
+No single vendor controls the entire workflow.
+
+That is exactly what I wanted.
