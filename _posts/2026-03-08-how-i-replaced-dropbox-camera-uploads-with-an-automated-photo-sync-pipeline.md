@@ -47,12 +47,6 @@ After I [replaced my old Frameo digital frame with an Android tablet running Fot
 
 ## What I wanted instead
 
-I did not want to replace Apple Photos. I already use it weekly to curate photos:
-
-- I remove what I do not want, like very similar photos
-- Keep selected photos in iCloud
-- Use albums to signal intent
-
 The idea was simple:
 
 > Apple Photos can handle syncing and curation, while automation handles exporting and filesystem organization.
@@ -109,7 +103,7 @@ This is the operational flow I usually follow each week:
 
 <div class="mermaid">
 flowchart TD
-    A[Open Apple Photos] --> B[Delete duplicates and curate]
+    A[Open Apple Photos] --> B[Delete duplicates]
     B --> C[Wait for iCloud sync]
     C --> D[Run export-photos-since]
     D --> E[Add selected photos to Digital frame album]
